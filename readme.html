@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>readme</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#caso-de-estudio-conteo-de-palabras-con-hadoop-mapreduce">Caso de Estudio: Conteo de Palabras con Hadoop MapReduce</a>
+<ul>
+<li><a href="#portada">Portada</a></li>
+<li><a href="#tabla-de-contenido">Tabla de Contenido</a></li>
+<li><a href="#introducción">Introducción</a>
+<ul>
+<li><a href="#entorno-de-trabajo">Entorno de Trabajo</a></li>
+</ul></li>
+<li><a href="#objetivos">Objetivos</a></li>
+<li><a href="#paso-1-conversión-de-pdf-a-texto-plano">Paso 1: Conversión de PDF a Texto Plano</a>
+<ul>
+<li><a href="#descripción">1.1 Descripción</a></li>
+<li><a href="#herramienta-utilizada">1.2 Herramienta Utilizada</a></li>
+<li><a href="#implementación">1.3 Implementación</a></li>
+<li><a href="#ejecución-del-script">1.4 Ejecución del Script</a></li>
+<li><a href="#resultado-de-la-conversión">1.5 Resultado de la Conversión</a></li>
+<li><a href="#estructura-del-archivo-resultante">1.6 Estructura del Archivo Resultante</a></li>
+<li><a href="#consideraciones-técnicas">1.7 Consideraciones Técnicas</a></li>
+<li><a href="#estructura-de-archivos-actual">1.8 Estructura de Archivos Actual</a></li>
+</ul></li>
+<li><a href="#paso-2-carga-de-datos-a-hdfs">Paso 2: Carga de Datos a HDFS</a></li>
+<li><a href="#paso-3-implementación-mapreduce">Paso 3: Implementación MapReduce</a></li>
+<li><a href="#paso-4-ejecución-y-resultados">Paso 4: Ejecución y Resultados</a></li>
+<li><a href="#conclusiones">Conclusiones</a></li>
+<li><a href="#referencias">Referencias</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="caso-de-estudio-conteo-de-palabras-con-hadoop-mapreduce">Caso de Estudio: Conteo de Palabras con Hadoop MapReduce</h1>
+<hr />
+<h2 id="portada">Portada</h2>
+<p><strong>Maestría:</strong> Ciencia de Datos<br />
+<strong>Universidad:</strong> Pontificia Universidad Javeriana<br />
+<strong>Materia:</strong> Gestión de Datos<br />
+<strong>Estudiantes:</strong> - Edwin Silva Salas - Carlos Preciado Cárdenas - Cristian Restrepo Zapata</p>
+<p><strong>Fecha:</strong> Diciembre 13, 2025</p>
+<hr />
+<h2 id="tabla-de-contenido">Tabla de Contenido</h2>
+<ol type="1">
+<li><a href="#introducción">Introducción</a></li>
+<li><a href="#objetivos">Objetivos</a></li>
+<li><a href="#paso-1-conversión-de-pdf-a-texto-plano">Paso 1: Conversión de PDF a Texto Plano</a></li>
+<li><a href="#paso-2-carga-de-datos-a-hdfs">Paso 2: Carga de Datos a HDFS</a></li>
+<li><a href="#paso-3-implementación-mapreduce">Paso 3: Implementación MapReduce</a></li>
+<li><a href="#paso-4-ejecución-y-resultados">Paso 4: Ejecución y Resultados</a></li>
+<li><a href="#conclusiones">Conclusiones</a></li>
+</ol>
+<hr />
+<h2 id="introducción">Introducción</h2>
+<p>Este documento detalla el proceso completo de implementación de un sistema de conteo de palabras utilizando Apache Hadoop MapReduce. El objetivo es procesar un documento académico en formato PDF, extraer su contenido textual y realizar un análisis de frecuencia de palabras utilizando el paradigma de procesamiento distribuido MapReduce.</p>
+<h3 id="entorno-de-trabajo">Entorno de Trabajo</h3>
+<ul>
+<li><strong>Sistema Operativo:</strong> Ubuntu 22.04 LTS en WSL</li>
+<li><strong>Hadoop:</strong> Versión 3.3.6</li>
+<li><strong>Python:</strong> Versión 3.x</li>
+<li><strong>Documento Origen:</strong> Inteligencia_Rodriguez_ICE_2022.pdf</li>
+</ul>
+<hr />
+<h2 id="objetivos">Objetivos</h2>
+<ol type="1">
+<li>Convertir un documento PDF a texto plano</li>
+<li>Cargar el texto a HDFS (Hadoop Distributed File System)</li>
+<li>Implementar un programa MapReduce para contar palabras</li>
+<li>Ejecutar el trabajo en Hadoop y analizar resultados</li>
+<li>Documentar el proceso completo</li>
+</ol>
+<hr />
+<h2 id="paso-1-conversión-de-pdf-a-texto-plano">Paso 1: Conversión de PDF a Texto Plano</h2>
+<h3 id="descripción">1.1 Descripción</h3>
+<p>El primer paso del proceso consiste en extraer el contenido textual del documento PDF académico “Inteligencia Artificial en el Sector Bancario” y guardarlo en un archivo de texto plano que pueda ser procesado por Hadoop.</p>
+<h3 id="herramienta-utilizada">1.2 Herramienta Utilizada</h3>
+<p>Se utiliza la herramienta <strong>pdftotext</strong> del paquete <code>poppler-utils</code>, que permite extraer texto de archivos PDF manteniendo la estructura del contenido.</p>
+<h3 id="implementación">1.3 Implementación</h3>
+<p>Se creó un script de Python llamado <code>pdf_to_txt.py</code> ubicado en la carpeta <code>/code/</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="co">Conversión de PDF a Texto Plano</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="co">Taller: Caso Conteo de Palabras con Hadoop</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a><span class="im">import</span> subprocess</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a><span class="im">import</span> os</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a><span class="co"># Rutas de archivos</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>PDF_FILE <span class="op">=</span> <span class="st">&quot;/home/esilvas/Documents/hadoop-python/files/Inteligencia_Rodriguez_ICE_2022.pdf&quot;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>OUTPUT_FILE <span class="op">=</span> <span class="st">&quot;/home/esilvas/Documents/hadoop-python/files/texto_plano.txt&quot;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a><span class="kw">def</span> pdf_to_text():</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a><span class="co">    Convierte un archivo PDF a texto plano usando pdftotext</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>    <span class="cf">try</span>:</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Convirtiendo PDF a texto plano...&quot;</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Archivo origen: </span><span class="sc">{</span>PDF_FILE<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Archivo destino: </span><span class="sc">{</span>OUTPUT_FILE<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>        </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>        <span class="co"># Ejecutar pdftotext para extraer el texto</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a>        subprocess.run([</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a>            <span class="st">&#39;pdftotext&#39;</span>,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a>            PDF_FILE,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a>            OUTPUT_FILE</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a>        ], check<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a>        </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a>        <span class="co"># Verificar que se creó el archivo</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a>        <span class="cf">if</span> os.path.exists(OUTPUT_FILE):</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true"></a>            <span class="co"># Obtener tamaño del archivo</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true"></a>            size <span class="op">=</span> os.path.getsize(OUTPUT_FILE)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true"></a>            <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="ch">\n</span><span class="ss">✅ Conversión exitosa!&quot;</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Archivo creado: </span><span class="sc">{</span>OUTPUT_FILE<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Tamaño: </span><span class="sc">{</span>size<span class="sc">}</span><span class="ss"> bytes&quot;</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true"></a>            </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true"></a>            <span class="co"># Contar líneas y palabras</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true"></a>            <span class="cf">with</span> <span class="bu">open</span>(OUTPUT_FILE, <span class="st">&#39;r&#39;</span>, encoding<span class="op">=</span><span class="st">&#39;utf-8&#39;</span>) <span class="im">as</span> f:</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true"></a>                lines <span class="op">=</span> f.readlines()</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true"></a>                words <span class="op">=</span> <span class="bu">sum</span>(<span class="bu">len</span>(line.split()) <span class="cf">for</span> line <span class="kw">in</span> lines)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true"></a>            </span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Líneas: </span><span class="sc">{</span><span class="bu">len</span>(lines)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true"></a>            <span class="bu">print</span>(<span class="ss">f&quot;Palabras aproximadas: </span><span class="sc">{</span>words<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true"></a>            <span class="bu">print</span>(<span class="st">&quot;❌ Error: No se pudo crear el archivo de salida&quot;</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true"></a>            </span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true"></a>    <span class="cf">except</span> subprocess.CalledProcessError <span class="im">as</span> e:</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true"></a>        <span class="bu">print</span>(<span class="ss">f&quot;❌ Error al ejecutar pdftotext: </span><span class="sc">{e}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true"></a>        <span class="bu">print</span>(<span class="ss">f&quot;❌ Error: </span><span class="sc">{e}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true"></a>    pdf_to_text()</span></code></pre></div>
+<h3 id="ejecución-del-script">1.4 Ejecución del Script</h3>
+<p>Para ejecutar el script, se utilizó el siguiente comando desde la terminal:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="bu">cd</span> /home/esilvas/Documents/hadoop-python/code</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="ex">python3</span> pdf_to_txt.py</span></code></pre></div>
+<h3 id="resultado-de-la-conversión">1.5 Resultado de la Conversión</h3>
+<pre><code>Convirtiendo PDF a texto plano...
+Archivo origen: /home/esilvas/Documents/hadoop-python/files/Inteligencia_Rodriguez_ICE_2022.pdf
+Archivo destino: /home/esilvas/Documents/hadoop-python/files/texto_plano.txt
+
+✅ Conversión exitosa!
+Archivo creado: /home/esilvas/Documents/hadoop-python/files/texto_plano.txt
+Tamaño: 66525 bytes
+Líneas: 1116
+Palabras aproximadas: 9574</code></pre>
+<h3 id="estructura-del-archivo-resultante">1.6 Estructura del Archivo Resultante</h3>
+<p>El archivo <code>texto_plano.txt</code> generado contiene:</p>
+<ul>
+<li><strong>Tamaño:</strong> 66,525 bytes (≈ 65 KB)</li>
+<li><strong>Líneas:</strong> 1,116</li>
+<li><strong>Palabras:</strong> Aproximadamente 9,574</li>
+</ul>
+<h4 id="muestra-del-contenido-primeras-líneas">Muestra del Contenido (Primeras líneas):</h4>
+<pre><code>Teresa Rodríguez de las Heras Ballell*
+
+INTELIGENCIA ARTIFICIAL EN EL SECTOR
+BANCARIO: REFLEXIONES SOBRE SU RÉGIMEN
+JURÍDICO EN LA UNIÓN EUROPEA
+El objetivo de este trabajo es aproximarnos al estado actual del régimen jurídico
+aplicable en la Unión Europea al uso de sistemas de inteligencia artificial en el sector
+financiero, y reflexionar sobre la necesidad de formular principios y reglas que aseguren
+una automatización responsable de los procesos de toma de decisiones y que sirvan de
+guía para implementar soluciones de inteligencia artificial en la actividad bancaria.</code></pre>
+<h3 id="consideraciones-técnicas">1.7 Consideraciones Técnicas</h3>
+<h4 id="ventajas-de-pdftotext">Ventajas de pdftotext:</h4>
+<ul>
+<li><strong>Simplicidad:</strong> Fácil de usar e integrar en scripts</li>
+<li><strong>Eficiencia:</strong> Procesamiento rápido de documentos</li>
+<li><strong>Robustez:</strong> Maneja bien documentos con múltiples columnas</li>
+<li><strong>Codificación:</strong> Soporta UTF-8, preservando caracteres especiales</li>
+</ul>
+<h4 id="aspectos-importantes">Aspectos Importantes:</h4>
+<ul>
+<li>El formato de columnas del PDF original no afecta el conteo de palabras</li>
+<li>El texto se extrae de forma lineal, facilitando el procesamiento posterior</li>
+<li>Se preservan caracteres especiales y acentos del español</li>
+</ul>
+<h3 id="estructura-de-archivos-actual">1.8 Estructura de Archivos Actual</h3>
+<pre><code>hadoop-python/
+├── code/
+│   ├── pdf_to_txt.py       # Script de conversión
+│   └── script.py            # Script de prueba inicial
+└── files/
+    ├── C1.caso-conteo_palabras.pdf
+    ├── Informe_Instalacion_Hadoop.pdf
+    ├── Inteligencia_Rodriguez_ICE_2022.pdf  # PDF origen
+    ├── L1.Instalación_Herramientas.pdf
+    └── texto_plano.txt                       # Texto extraído ✅</code></pre>
+<hr />
+<h2 id="paso-2-carga-de-datos-a-hdfs">Paso 2: Carga de Datos a HDFS</h2>
+<p><em>[Pendiente - Se documentará en el siguiente paso]</em></p>
+<hr />
+<h2 id="paso-3-implementación-mapreduce">Paso 3: Implementación MapReduce</h2>
+<p><em>[Pendiente - Se documentará posteriormente]</em></p>
+<hr />
+<h2 id="paso-4-ejecución-y-resultados">Paso 4: Ejecución y Resultados</h2>
+<p><em>[Pendiente - Se documentará posteriormente]</em></p>
+<hr />
+<h2 id="conclusiones">Conclusiones</h2>
+<p><em>[Se completará al finalizar todos los pasos]</em></p>
+<hr />
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li>Apache Hadoop Documentation: https://hadoop.apache.org/docs/r3.3.6/</li>
+<li>Poppler Utils: https://poppler.freedesktop.org/</li>
+<li>Python Subprocess Documentation: https://docs.python.org/3/library/subprocess.html</li>
+</ul>
+</body>
+</html>

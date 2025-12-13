@@ -1,0 +1,1116 @@
+Teresa Rodríguez de las Heras Ballell*
+
+INTELIGENCIA ARTIFICIAL EN EL SECTOR
+BANCARIO: REFLEXIONES SOBRE SU RÉGIMEN
+JURÍDICO EN LA UNIÓN EUROPEA
+El objetivo de este trabajo es aproximarnos al estado actual del régimen jurídico
+aplicable en la Unión Europea al uso de sistemas de inteligencia artificial en el sector
+financiero, y reflexionar sobre la necesidad de formular principios y reglas que aseguren
+una automatización responsable de los procesos de toma de decisiones y que sirvan de
+guía para implementar soluciones de inteligencia artificial en la actividad bancaria.
+Artificial Intelligence in the banking sector: some thoughts on its legal regime
+in the European Union
+The objective of this work is to approach the current state of the legal regime applicable in the European
+Union to the use of artificial intelligence systems in the financial sector and to reflect on the need to
+formulate principles and rules that ensure responsible automation of decision-making processes and that
+serve as a guide to implement artificial intelligence solutions in banking activity.
+Palabras clave: automatización, decisión automática, sesgo algorítmico, responsabilidad, machine
+learning, algoritmos.
+Keywords: automation, automated decision, algorithmic bias, liability, machine learning, algorithms.
+JEL: K12, K13, K22, K23, K24.
+
+1.
+
+Introducción
+
+La automatización, progresiva pero imparable, de
+actividades, tareas y procesos de toma de decisiones
+mediante una aplicación sistemática de técnicas y sistemas de inteligencia artificial (IA) está marcando una
+nueva etapa en la transformación digital de la sociedad
+
+* Profesora Titular de Derecho Mercantil, Universidad Carlos III de Madrid.
+Contacto: teresa.rodriguezdelasheras@uc3m.es
+Versión de abril de 2022.
+https://doi.org/10.32796/ice.2022.926.7398
+
+y la economía contemporáneas1. El sector financiero,
+tradicionalmente receptivo y permeable2 a los avances
+tecnológicos, no es ajeno a este proceso de intensa
+y extensa incorporación de la IA, para múltiples fines,
+
+1
+Se inicia así una segunda generación de la transformación digital.
+La terminología «primera y segunda generación» para referirse a las
+sucesivas oleadas de tecnologías emergentes se emplea y explica por
+la autora en otras publicaciones previas. A tal efecto, Rodríguez de las
+Heras Ballell (2019a, pp. 61 y siguientes).
+2
+Los mercados financieros vienen incorporando los canales digitales de
+comunicación y las aplicaciones tecnológicas, según el estado de la técnica,
+desde hace más de dos décadas (International Finance Corporation [IFC],
+2017, p. 1, nota 42). La regulación se ha ido acomodando gradualmente a
+estas transformaciones (Dermine, 2016, pp. 1-8).
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+ICE 93
+
+Teresa Rodríguez de las Heras Ballell
+en su actividad3. Las ventajas y las oportunidades que
+las soluciones de IA ofrecen, en términos de eficiencia,
+personalización, gestión de riesgos o reducción de
+costes, no han pasado desapercibidas para el sector
+financiero, especialmente, sus efectos multiplicadores
+cuando se combina sinérgicamente con otras tecnologías transformativas que concurren de forma síncrona en el mercado, con similares niveles de madurez técnica (World Economic Forum [WEF], 2020,
+p. 14), viabilidad comercial y aplicabilidad práctica
+—big data, internet de las cosas (IoT), computación en
+la nube (cloud computing), tecnologías de registro distribuido (DLT, distributed ledger technologies), computación cuántica, plataformas, realidad virtual, realidad
+aumentada—4.
+Con usos y aplicaciones muy diversas, la IA ha
+penetrado transversalmente en los mercados financieros de forma cada vez más visible5. Su alianza con
+el procesamiento analítico y predictivo de big data
+
+3
+El estudio resultante de la encuesta elaborada por el Institute of
+International Finance (2018) revelaba que los bancos comerciales
+tradicionales están adoptando soluciones tecnológicas (inteligencia
+artificial y técnicas de aprendizaje machine learning y deep learning)
+como estrategia para ganar eficiencia y competir eficazmente con los
+nuevos entrantes FinTech. La PwC’s 2021 Digital Banking Consumer
+Survey confirma esta misma actitud de los bancos tradicionales
+para reconsiderar sus prácticas, modelos y estrategias de venta,
+comercialización e interacción con los clientes (PricewaterhouseCoopers
+[PwC], 2021). En esta estrategia de revisión y modernización, la
+incorporación de tecnologías digitales —en particular, se destaca el uso
+de IA y modelos de machine learning para ofrecer con alta precisión
+servicios personalizados— es una pieza crucial. https://www.pwc.com/us/
+en/industries/banking-capital-markets/library/digital-banking-consumersurvey.html
+4
+World Fintech Report 2018 destaca las posibilidades que ofrecen
+las tecnologías emergentes para la prestación de servicios financieros
+orientados al cliente —inteligencia artificial, análisis de datos, robótica,
+DLT, biometría, plataformas, IoT, realidad aumentada, chatbots y
+asistentes virtuales— (Capgemini, 2018, pp. 20 y ss). World Fintech
+Report 2021 confirma cómo la combinación sinérgica de estas
+tecnologías transformativas ha abierto cuatro rutas para la innovación en
+el sector financiero: establecer ecosistemas, integrar procesos físicos y
+digitales, reorientar los flujos transaccionales y reimaginar las funciones
+core (Capgemini, 2021).
+5
+De acuerdo con la Autoridad Bancaria Europea (EBA, por sus siglas
+en inglés), el 64 % de los bancos europeos ya han implementado
+soluciones basadas en IA en servicios y procesos, fundamentalmente con
+el objetivo de reducir costes, aumentar la productividad y facilitar nuevas
+formas de competir (EBA, 2020b, p. 75).
+
+94
+
+ICE
+
+por las entidades financieras (Joint Committee of the
+European Supervisory Authorities, 2018) es quizá la
+dimensión más reveladora de una profunda transformación del sector, las estrategias de negocio, los riesgos y las operaciones (EBA, 2020a).
+La percepción de su utilidad (European Securities
+and Markets Authority [ESMA] et al., 2015; PwC, 2016,
+p. 8) y, sobre todo, de la oportunidad y la conveniencia
+de una incorporación cada vez más apremiante se ha
+visto alentada por unas condiciones competitivas marcadamente diferentes, precisamente por el impacto de
+la tecnología en la arquitectura del mercado y unas circunstancias excepcionales derivadas de la pandemia6.
+En efecto, este proceso de intensa migración digital ha
+alterado la estructura y las condiciones de competencia en el mercado con la apertura de nuevos nichos
+para la irrupción de innovadoras firmas FinTech7 y la
+entrada arrolladora de las BigTech en la prestación de
+servicios financieros. La función esencial de los mercados financieros como mecanismos de asignación eficiente del ahorro a la inversión puede configurarse bajo
+estructuras muy diversas. La innovación tecnológica ha
+dotado al sector de nuevas arquitecturas (Dapp, 2015,
+p. 5) en un continuo que se desplaza desde los modelos de plataforma (Rodríguez de las Heras Ballell, 2017,
+pp. 149-176), basados en una estructura centralizada, a
+los modelos descentralizados o distribuidos (Chiu, 2016,
+p. 55) —en diverso grado— que los sistemas de registro distribuido (DLT) (Wright y De Filippi, 2015) permiten
+articular (Lewis et al., 2017).
+Los cambios en la arquitectura del mercado y las
+oportunidades de prestación de nuevos servicios y de
+intermediación en la distribución de nuevos activos y
+productos financieros han impulsado la emergencia
+
+6
+Según el informe de Capgemini (2021), «Las consecuencias de la
+pandemia han hecho que el entorno tradicional de la banca retail sea aún
+más exigente. (...)». https://fintechworldreport.com/
+7
+Según la definición del Financial Stability Board (FSB, 2017, p. 7), se
+entiende por FinTech «technology-enabled innovation in financial services
+that could result in new business models, applications, processes or
+products, with an associated material effect on the provision of financial
+services». https://www.fsb.org/wp-content/uploads/R270617.pdf
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+InTeligencia ArTificial en el secTor Bancario: reflexiones soBre su régimen jurídico en la Unión Europea
+de nuevo actores en el mercado —operadores de plataformas de financiación participativa, agregadores,
+comparadores, robo-asesores, proveedores de algoritmos, operadores de plataformas de social trading,
+operadores de sistemas multilaterales de negociación— animados por las bajas barreras de entrada, las
+prometedoras oportunidades de negocio, la reducción
+de costes y las economías de escala.
+En este nuevo panorama se entablan complejas
+relaciones de cooperación 8 y competencia (WEF,
+2017) entre entrantes e incumbents (Biglaiser et al.,
+2019, pp. 41-48). La presencia en el mercado de nuevos actores, ofreciendo servicios complementarios o
+instrumentales, creando nuevos entornos y canales
+de comunicación e intermediación, y aportando valor
+a servicios y productos tradicionales, pone a prueba el
+ámbito tradicional de la regulación y los límites clásicos de la supervisión (Asociación Española de Fintech
+e Insurtech [AEFI], 2017; Basel Committee on Banking
+Supervision, 2018).
+Por otro lado, las restricciones de movilidad, con
+cierres, confinamientos y limitaciones a los desplazamientos, para contener la expansión de la pandemia COVID-19 desde el primer trimestre de 2020,
+aun siendo coyunturales, han convertido la oportunidad de la banca digital en una necesidad de supervivencia e incluso una obligación, en la práctica, para
+una adecuada prestación del servicio y atención a la
+clientela. En un contexto íntegramente digital para
+toda la interacción con el cliente y la operativa, el uso
+de IA para optimización, personalización o recomendación es clave. El procesamiento de las crecientes
+
+8
+Según el informe KPMG-Funcas (2018), Comparativa de la oferta
+de la banca vs. Fintech, https://assets.kpmg/content/dam/kpmg/es/
+pdf/2018/06/comparativa-oferta-%20banca-fintech.pdf, un 48 % de
+las FinTech nacionales son complementarias a los bancos, el 32 %
+son colaborativas y el 20 % competidoras. Se estima que un 26 % de
+las entidades financieras se han asociado con BigTech o gigantes
+tecnológicos y un porcentaje similar adicional planean hacerlo en el plazo
+de los 12 meses siguientes, según el informe KPMG-Funcas (2019),
+La banca ante las BigTech, https://assets.kpmg/content/dam/kpmg/es/
+pdf/2019/11/La-banca-ante-las-fintech.pdf, presentado en el marco del
+Observatorio de la Digitalización Financiera (ODF).
+
+cantidades de datos requiere medios automatizados.
+En esta coyuntura, forzada y excepcional, muchas iniciativas de digitalización se han priorizado para atender las circunstancias. Una banca que ha completado
+su migración digital se encuentra en condiciones muy
+favorables y receptivas a las soluciones de IA.
+Esta tendencia, como respuesta a las demandas
+del mercado, se enmarca en un contexto de creciente atención regulatoria, en especial, en la Unión
+Europea, para explotar las posibilidades y contener los riesgos de la IA. Los esfuerzos por definir un
+marco normativo armonizado para la introducción en
+el mercado, la puesta en funcionamiento y la utilización de sistemas de IA bajo ciertas prohibiciones,
+requisitos y obligaciones cristalizan en la propuesta
+de Reglamento conocido como Ley de IA (Comisión
+Europea, 2021). Desde una perspectiva sectorial, la
+Autoridad Bancaria Europea (ABE) ya había abogado
+por la necesidad de incorporar un conjunto de principios fundamentales que aseguraran el uso responsable y la implementación de una IA segura y fiable en
+el sector (EBA, 2020a, pp. 33-42). De hecho, promover una IA segura, fiable y de alta calidad en Europa
+se ha convertido en uno de los ejes vertebrales de
+la Estrategia Digital de la Unión Europea definida
+en el paquete estratégico adoptado el 19 de febrero
+de 2020. El Libro Blanco sobre IA (Comisión Europea,
+2020b) y el Informe sobre las implicaciones de seguridad y responsabilidad de la IA, IoT (Internet of Things)
+y robótica (Comisión Europea, 2020a) definen las
+coordenadas para el futuro digital europeo (Comisión
+Europea, 2020c). Las Directrices Éticas para una IA
+fiable del Grupo Independiente de Expertos de Alto
+Nivel sobre IA en la Unión Europea9, que toma como
+referencia, de hecho, la ABE, marcaron los primeros
+pasos hacia la consolidación de un cuerpo de principios y reglas para la IA —explicabilidad, trazabilidad,
+evitación de sesgos, equidad, calidad de datos, seguridad, protección de datos—. Pero el régimen jurídico
+9
+
+https://ec.europa.eu/futurium/en/ai-alliance-consultation.1.html
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+ICE 95
+
+Teresa Rodríguez de las Heras Ballell
+para el desarrollo, la implementación, la puesta en el
+mercado o el uso de sistemas de IA requiere incorporar otras normas dispersas en la legislación europea o
+previstas en algunos de los instrumentos sobre servicios y mercados digitales de próxima adopción.
+Aun así, no resulta un cuerpo coherente y completo, integral, de reglas relativas al uso de sistemas
+de IA en el sector bancario. Es preciso componer un
+conjunto heterogéneo y plural de normas que proceden
+de regulaciones sectoriales, resultan de la inferencia de principios generales, aplican normas de instrumentos internacionales de armonización o proyectan
+las reglas sobre obligaciones, contratos o responsabilidad a través de más o menos exitosos esquemas
+basados en la equivalencia funcional y la neutralidad
+tecnológica10.
+El objetivo de este trabajo es recorrer este trayecto
+que parte de la observación de un uso creciente y visible de la IA en el sector financiero para adentrarse
+en el debate regulatorio y normativo y concluir con
+una reflexión sobre los principios que deben guiar el
+diseño, el desarrollo y la implementación de sistemas
+de IA en el sector. Para ello, el trabajo va abordando
+las diversas cuestiones con las que hemos esbozado
+el contexto en los párrafos introductorios anteriores.
+Primero, en el apartado 2, se define el concepto de
+sistema de IA que, a los fines de este trabajo y para un
+análisis jurídico ulterior, se va a emplear y su interacción con otros términos relacionados. A continuación,
+se exploran las diversas aplicaciones de la IA en el
+sector financiero, en general, y en el bancario, en particular. Todo ello asienta las bases conceptuales para
+analizar el marco normativo, con las normas existentes y en proceso de adopción, aplicable a los sistemas
+de IA (apartado 3), para concluir finalmente, con una
+10
+Principios consagrados en los instrumentos internacionales
+de armonización adoptados por Naciones Unidas: destacada y
+esencialmente, Ley Modelo de Comercio Electrónico de 1996, Ley
+Modelo de Firma Electrónica de 2001, Convenio de 2005 sobre el Uso de
+Comunicaciones Electrónicas en el Comercio Internacional, Ley Modelo
+sobre Documentos Transmisibles Electrónicos de 2017. https://uncitral.
+un.org/
+
+96
+
+ICE
+
+propuesta de los principios fundamentales que deberían guiar el diseño, la implementación y el uso de
+sistemas de IA en el desarrollo de una actividad económica (apartado 4).
+2.
+
+Concepto y taxonomía: la IA en el sector
+financiero
+
+La transformación digital está generando una íntima
+e intensa imbricación de diversas tecnologías con la
+realidad socioeconómica. Esto implica recalibrar principios y reglas, pero también terminología y conceptos. La respuesta jurídica debe articularse con definiciones adecuadas y conceptos con relevancia jurídica
+que aprehendan adecuadamente los rasgos distintivos de las soluciones tecnológicas sin caer en una
+mera descripción técnica, que haría devenir a la ley
+siempre e irremediablemente obsoleta ante el progreso tecnológico, sino en una categorización funcional, que entienda las funciones sin prejuzgar la solución tecnológica ni el modelo de negocio. Debemos,
+por tanto, comenzar con un esfuerzo, finalista, de conceptualización de los sistemas de IA «a los efectos de
+la ley».
+Sistemas de IA: concepto y definición
+En la legislación europea, vigente o pendiente de
+adopción, las referencias a la automatización aparecen dispersas y con terminología dispar. Encontramos
+en el Reglamento General de Protección de Datos
+(RGPD) 11, o en la propuesta de Ley de Servicios
+Digitales (DSA, Digital Services Act) (Comisión
+Europea, 2020d) referencias a decisiones individuales
+automatizadas, decisiones algorítmicas, sistemas
+
+11
+Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo,
+de 27 de abril de 2016, relativo a la protección de las personas físicas en
+lo que respecta al tratamiento de datos personales y a la libre circulación
+de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento
+general de protección de datos) (Texto pertinente a efectos del EEE). Diario
+Oficial de la Unión Europea, L 119, de 4 de mayo de 2016, pp. 1-88.
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+InTeligencia ArTificial en el secTor Bancario: reflexiones soBre su régimen jurídico en la Unión Europea
+algorítmicos de recomendación o de moderación de
+contenidos, priorización algorítmica, o uso de medios
+automáticos o automatizados para diversos fines. Pero
+no hay en los textos definición ni explícita referencia a
+la «IA». Es la futura Ley de IA la que define expresamente los «sistemas de IA», a los fines de la norma,
+para delimitar su ámbito material de aplicación.
+La definición de sistema de IA a los efectos del instrumento propuesto es la siguiente: «sistema de inteligencia artificial» significa «software que se desarrolla
+con una o más de las técnicas y enfoques enumerados en el Anexo I y puede, para un conjunto determinado de objetivos definidos por el hombre, generar
+resultados tales como contenido, predicciones, recomendaciones o decisiones que influyan en los entornos con los que interactúan» (art. 3.1 Ley IA).
+Con esta definición, los sistemas de IA quedan definidos sobre la base de dos componentes.
+Primero, el que permite calificarlos como learning system
+y separarse así de los sistemas computacionales más tradicionales. Es decir, el hecho de que emplean o se desarrollan con técnicas de «IA», que la Ley de IA definiría en un
+Anexo I, susceptible de ulterior ampliación o modificación,
+y que actualmente incluye: estrategias de aprendizaje automático, incluidos el aprendizaje supervisado, el no supervisado y el realizado por refuerzo, que emplean una amplia
+variedad de métodos, entre ellos el aprendizaje profundo;
+estrategias basadas en la lógica y el conocimiento, especialmente la representación del conocimiento, la programación
+(lógica) inductiva, las bases de conocimiento, los motores
+de inferencia y deducción, los sistemas expertos
+y de razonamiento (simbólico); estrategias estadísticas, estimación bayesiana, métodos de búsqueda y optimización.
+Segundo, la influencia en el entorno con el que
+interactúan generando resultados como predicciones,
+recomendaciones, contenido o auténticas decisiones.
+Tras esta definición late la presunción de que son precisamente las capacidades de «aprendizaje» de estos
+sistemas las que determinan en gran medida sus efectos disruptivos (Rodríguez de las Heras Ballell, 2019b,
+pp. 302-314) (opacidad, vulnerabilidad, complejidad,
+
+dependencia de los datos, autonomía) y, por ende, la
+necesidad de reconsiderar la adecuación de las reglas
+tradicionales. Este es, de hecho, el razonamiento que
+conduce a repensar las reglas de la responsabilidad y
+apreciar así su adecuación ante los rasgos distintivos
+de la IA como propone el informe publicado el 21 de
+noviembre de 2019, Report on Liability for Artificial
+Intelligence and other emerging technologies12, por
+el Grupo de Expertos 13 en New Technologies and
+Liability que asesora a la Comisión Europea14.
+No obstante, la formulación de esta definición en
+la propuesta de la Comisión ha sido objeto de reconsideración y puede evolucionar hasta su redacción
+final. El texto de compromiso presentado a fines
+de noviembre de 2021 por la Presidencia eslovena
+del Consejo Europeo [Consejo de la Unión Europea,
+texto de compromiso de la Presidencia, 29 de noviembre de 2021, 2021/0106(COD), en adelante simplemente «Compromiso conjunto»] propuso algunos
+cambios a esta definición15. El texto, en su preámbulo, explica que los cambios hacen una referencia
+explícita al hecho de que el sistema de IA debería ser
+
+12
+Informe del Grupo de Expertos en su New Technologies
+formation: Report on Liability for Artificial Intelligence and other
+emerging technologies. https://op.europa.eu/en/publication-detail/-/
+publication/1c5e30be-1197-11ea-8c1f-01aa75ed71a1/language-en
+13
+Expert Group on Liability and new Technologies, en sus dos
+formaciones: New Technologies formation y Product Liability formation.
+https://ec.europa.eu/transparency/regexpert/index.cfm?do=groupDetail.
+groupDetail&groupID=3592
+14
+La autora es miembro del Expert Group on Liability and new
+Technologies (New Technologies formation), que asiste a la Comisión
+Europea en la elaboración de principios y directrices para la adaptación
+de los marcos normativos europeo y nacionales de la responsabilidad
+ante los desafíos de las tecnologías digitales emergentes (Inteligencia
+Artificial, Internet de la Cosas, Big Data, Blockchain y DLT). El Grupo de
+Expertos emitió su Report on Liability for Artificial Intelligence and other
+emerging technologies que se publicó el 21 de noviembre de 2019. Las
+opiniones vertidas por la autora en este trabajo son personales y no
+reflejan necesariamente ni la opinión del Grupo de Expertos ni la postura
+de la Comisión Europea.
+15
+«Artificial intelligence system (AI system) means a system that:
+i) receives machine and/or human-based data and inputs; ii) infers how to
+achieve a given set of human-defined objectives using learning, reasoning
+or modelling implemented with the techniques and approaches listed in
+Annex I; and iii) generates outputs in the form of content (generative AI
+systems), predictions, recommendations or decisions, which influence the
+environments it interacts with».
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+ICE 97
+
+Teresa Rodríguez de las Heras Ballell
+capaz de determinar cómo lograr un conjunto determinado de objetivos humanos predefinidos mediante
+el aprendizaje, el razonamiento o el modelado, para
+distinguirlos de forma más clara y unívoca de los más
+tradicionales sistemas de software, que no deben
+entrar en el ámbito de aplicación de la propuesta de
+Reglamento. Pero además con esta propuesta, la
+definición de sistema de IA se estiliza y refleja estructuralmente las tres piezas básicas: inputs, procesos
+y outputs.
+También, la Resolución del Parlamento Europeo
+sobre la responsabilidad por el funcionamiento de
+los sistemas de Inteligencia Artificial (Parlamento
+Europeo, 2020) se refiere expresamente a los sistemas de IA y formula su propia definición (art. 3.a)16.
+Esta Resolución contiene un conjunto de recomendaciones para la elaboración de un Reglamento del
+Parlamento Europeo y del Consejo relativo a la responsabilidad civil por los daños causados ​​por el funcionamiento de los sistemas de IA. Su estado en el
+proceso legislativo aún no permite tomarla como referencia normativa.
+El resto de textos normativos no se refieren explícitamente a la IA, aunque contienen reglas sobre algoritmos, sistemas algorítmicos de diversos tipos, automatización o toma automática de decisiones. Así, como
+ya se ha mencionado, RGPD, DSA, la propuesta de
+Reglamento conocido como Ley de Mercados Digitales
+(DMA, Digital Market Act) (Comisión Europea, 2020e),
+entre otros, el Reglamento P2B17 hacen referencia a la
+calificación algorítmica, la toma de decisiones algorítmica, los sistemas de recomendación algorítmica, la
+
+16
+a) «sistema de inteligencia artificial»: todo sistema basado en
+programas informáticos o incorporado en dispositivos físicos que muestra
+un comportamiento que simula la inteligencia, entre otras cosas, mediante
+la recopilación y el tratamiento de datos, el análisis y la interpretación de
+su entorno y la adopción de medidas, con cierto grado de autonomía,
+para lograr objetivos específicos.
+17
+Reglamento (UE) 2019/1150 del Parlamento Europeo y del Consejo,
+de 20 de junio de 2019, sobre el fomento de la equidad y la transparencia
+para los usuarios profesionales de servicios de intermediación en línea
+(Texto pertinente a efectos del EEE) PE/56/2019/REV/1. Diario Oficial de
+la Unión Europea, L 186, de 11 de julio de 2019, pp. 57-79.
+
+98
+
+ICE
+
+moderación algorítmica de contenido, las estructuras
+algorítmicas, la creación automatizada de perfiles o
+una variedad de actividades y acciones realizadas por
+medios automatizados. Incluyen reglas relacionadas
+con los algoritmos, tales como: divulgación, evaluación de riesgos, auditorías de rendición de cuentas y
+transparencia, inspecciones in situ, obtención de consentimiento, etc. Como revela la definición de sistemas de IA propuesta por la Ley de IA, las recomendaciones, decisiones, predicciones u otro contenido
+digital de cualquier tipo, así como las acciones resultantes del sistema en el entorno o en relación con él,
+son resultados (outputs) naturales y frecuentes de los
+sistemas de IA. En consecuencia, las disposiciones
+normativas que de algún modo regulan los procesos
+algorítmicos y la toma de decisiones por medios automatizados en una diversidad de escenarios y con una
+variedad de propósitos también son relevantes para
+la construcción del marco regulatorio de la IA en la
+Unión Europea.
+Siempre que se utilicen los métodos y enfoques
+enumerados en el Anexo I de la Ley de IA propuesta18,
+un sistema de IA puede estar sujeto a la Ley de IA, así
+como a otras normas en función del propósito específico, el fin al que está destinado o la acción concreta.
+Como ilustración, si el sistema está destinado a producir recomendaciones por una plataforma bancaria
+muy grande, la DSA (art. 29) puede ser aplicable; o
+si el sistema se aplica a la elaboración de perfiles, el
+RGPD (art. 22) puede ser relevante.
+En conclusión, comprender la complementariedad entre los diversos textos jurídicos que abordan
+directa o indirectamente el uso de algoritmos para una
+Anexo I:
+«a) Estrategias de aprendizaje automático, incluidos el aprendizaje
+supervisado, el no supervisado y el realizado por refuerzo, que emplean
+una amplia variedad de métodos, entre ellos el aprendizaje profundo.
+b) Estrategias basadas en la lógica y el conocimiento, especialmente
+la representación del conocimiento, la programación (lógica) inductiva,
+las bases de conocimiento, los motores de inferencia y deducción, los
+sistemas expertos y de razonamiento (simbólico).
+c) Estrategias estadísticas, estimación bayesiana, métodos de
+búsqueda y optimización».
+18
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+InTeligencia ArTificial en el secTor Bancario: reflexiones soBre su régimen jurídico en la Unión Europea
+variedad de fines y desde diversas perspectivas jurídicas es fundamental para componer el marco regulatorio actual y futuro de la IA, como exponemos más
+adelante.
+Usos actuales y posibles de la IA en el sector
+financiero
+Con diversos niveles de intensidad, los sistemas de
+IA se emplean de forma transversal en el sector bancario a lo largo de toda la cadena de valor front linemid office-back office. Para la atención e interacción
+con el cliente, los sistemas de IA ofrecen posibilidades extraordinarias de personalización, recomendación y profiling, gestión de cuentas, inversión (trading)
+y asesoramiento financiero (robo advisers), atención
+continua mediante chatbots y asistentes virtuales, refinadas soluciones de KYC (Know Your Customer). En
+la gestión interna de las operaciones, las soluciones
+de IA se aplican en la automatización de procesos
+corporativos, administrativos y transaccionales, en la
+optimización de diversas actividades o la gestión del
+compliance. Para la gestión de riesgos, las soluciones de IA se proyectan en la mejora de sistemas de
+prevención de fraude, de alerta temprana o de ciberseguridad, además de incorporarse en modelos predictivos de contratación y promoción de personal. Otro
+uso interesante19 de los modelos de análisis avanzado
+con machine learning es el cálculo y la determinación
+del capital regulatorio. Se estiman porcentajes apreciables de ahorro de costes (Alonso y Carbó, 2021) si
+se emplean estos modelos para calcular los activos
+ponderados por riesgo.
+La observación de este uso transversal y multipropósito permite anticipar algunas consideraciones de
+interés y relevancia para el análisis jurídico. Se constata que la automatización impacta sobre procesos
+
+19
+Aunque su uso efectivo es aún limitado, se aprecian ventajas muy
+significativas que anuncian ratios esperados de implementación
+muy prometedores (EBA, 2020a, p. 20, Figure 2.1).
+
+decisionales, acciones u operaciones de diversa naturaleza lo que será decisivo para determinar, al menos,
+tres elementos.
+Primero, el régimen regulatorio aplicable (p.ej., si
+se emplea para automatizar el cumplimiento de las
+normas de información, para prevenir fraude, para
+personalizar ofertas al cliente o para resolver quejas
+a través de un chatbot). Segundo, los posibles escenarios de responsabilidad (p. ej., si los sesgos algorítmicos y los datos obtenidos de las redes sociales para
+el sistema de calificación crediticia y de evaluación de
+la solvencia podrían derivar en acciones de discriminación sistemática). Tercero, el contexto transaccional
+en el que se emplea (p. ej., en relaciones de consumo
+con clientes minoristas, en las relaciones con el supervisor o en relaciones internas con los empleados o con
+los socios).
+Los beneficios asociados al uso de algoritmos y la
+IA y las ganancias esperadas de una aplicación sistemática y extensa son numerosos (Deloitte, 2018).
+Los sistemas guiados por algoritmos proporcionan
+celeridad, simplicidad y eficacia en la resolución de
+una multitud de problemas. La automatización reduce
+drásticamente los costes de transacción, permitiendo
+la prestación en condiciones razonables y competitivas de servicios que no serían rentables, o resultarían inasequibles o inviables en otras circunstancias. La reducción de costes explica, por ejemplo, el
+floreciente sector de los robo-asesores (robo-advisors) (Deutsche Bank Research, 2017, p. 9) que se
+han expandido en el mercado más allá de los asesores financieros tradicionales con apreciables beneficios para los consumidores, al diversificar la oferta,
+aumentar la competencia y mejorar la inclusión financiera (Bucher-Koenen, 2010). Tal expansión ha facilitado el asesoramiento financiero a pequeños patrimonios de inversión y a inversores de bajos ingresos
+en condiciones de mercado.
+Por lo tanto, los sistemas basados en
+​​ algoritmos pueden realizar tareas automatizadas y adoptar decisiones
+masivas de manera eficiente (negociación algorítmica
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+ICE 99
+
+Teresa Rodríguez de las Heras Ballell
+de alta frecuencia, motores de búsqueda, reconocimiento facial, asistentes personales, traducción automática, algoritmos predictivos y sistemas de recomendación). El uso de algoritmos es crítico para la prestación
+a gran escala de servicios críticos en nuestra sociedad
+que sería imposible o altamente ineficiente de otro modo
+(búsqueda, clasificación, filtrado, calificación, ranking).
+Sin embargo, el uso de algoritmos de forma expansiva y creciente en nuestra sociedad puede ser también
+fuente de nuevos riesgos, conducir a resultados indeseados, tener consecuencias inesperadas o despertar preocupaciones jurídicas y desafíos sociales de muy variada
+índole. Las decisiones algorítmicas pueden resultar sesgadas o ser discriminatorias (Chander, 2017, pp. 10231045) como resultado de precondiciones prejuiciosas,
+basadas en estereotipos o dirigidas a explotar vulnerabilidades del usuario, un diseño inadecuado del algoritmo
+o un conjunto de datos para el entrenamiento y el aprendizaje insuficiente o impreciso (Barocas et al., 2016).
+La automatización de las decisiones basadas en algoritmos hace que el sesgo devenga masivo, se amplifique y
+distorsione y gane fácilmente viralidad. En una sociedad
+densamente conectada como la nuestra, la viralidad
+actúa como un amplificador de los efectos dañosos de
+cualquier acción. Los impactos negativos se expanden
+rápidamente, la magnitud de los daños se incrementa y
+la reversibilidad de los efectos se hace menos probable
+y cada vez más impracticable. La incorporación de técnicas de decisión y aprendizaje en sistemas basados
+en IA cada vez más sofisticadas añade una creciente
+imprevisibilidad sobre la respuesta futura. Todo ello conduce a una mayor imprevisión y una imparable complejidad que no siempre cohonesta con las reglas y fórmulas tradicionales para la atribución de la responsabilidad
+(ver apartado 3).
+3.
+
+Una revisión inicial del marco normativo y
+regulatorio en la Unión Europea
+
+El uso de sistemas de IA para la toma de decisiones y la automatización de tareas y actividades en
+
+100
+
+ICE
+
+el sector financiero no cuenta con un marco jurídico
+completo y específico, ni de forma trasversal ni en sus
+diversas aplicaciones sectoriales.
+El marco legal y regulatorio debe componerse con
+el encaje de disposiciones normativas procedentes de
+diversos instrumentos y completarse con la inferencia
+de ciertos principios a partir de reglas aplicables a decisiones equivalentes no automatizadas. La aplicación
+del principio de equivalencia funcional (entre decisiones
+automatizadas y no automatizadas con funciones equivalentes) guiada por la neutralidad tecnológica permite
+extraer o extrapolar reglas existentes al uso de sistemas de IA. Con todo, como se defiende en la parte final
+de este trabajo, este esfuerzo por acomodar las reglas
+existentes al uso de diversas tecnologías, bajo un objetivo de no discriminación por razón del medio empleado,
+comienza a mostrar dificultades ante las características
+distintivas de los sistemas de IA y no permite dotar de
+seguridad jurídica con un cuerpo normativo consistente.
+De ahí que se sugiera la formulación de un conjunto de
+principios y la revisión crítica de la normativa para asegurar que la Unión Europea cuenta con un marco que
+aporta certidumbre y estimula el uso responsable de sistemas de IA en el sector financiero.
+Para ir componiendo este conjunto de normas,
+comenzamos primero con las disposiciones más
+específicas para los sistemas de IA que podríamos
+encontrar en la futura Ley de IA.
+La posible aplicación de la futura Ley de IA a los
+usos de la IA en el sector financiero
+Este futuro Reglamento se articula sobre la base
+de una clasificación de los usos, aplicaciones y prácticas de IA en función del riesgo, a la que se anuda un
+régimen jurídico determinado: prohibición, requisitos
+para los sistemas de alto riesgo, transparencia y otras
+obligaciones para ciertos sistemas de bajo riesgo. La
+clasificación de los sistemas de IA no se realiza por
+razón de la tecnología sino por los específicos usos
+o aplicaciones. Esto hace que no haya una selección
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+InTeligencia ArTificial en el secTor Bancario: reflexiones soBre su régimen jurídico en la Unión Europea
+expresa por sectores, pero puedan identificarse ciertas prácticas con usos sectoriales preferentes como la
+evaluación de solvencia y la determinación automatizada de la calificación crediticia.
+
+Si bien, parece limitado el impacto potencial de las
+prohibiciones de la Ley de IA de ciertas prácticas en
+el sector financiero, la probabilidad de que sean sistemas clasificados como alto riesgo es ciertamente
+mucho más alta.
+
+Las prácticas prohibidas por la Ley de IA y su
+relevancia en la actividad financiera
+
+Sistemas de alto riesgo en la Ley de IA
+
+La lectura de las prácticas prohibidas en el
+artículo 5 de la Ley de IA no presenta inicialmente una
+coincidencia evidente con los usos esperados de la IA
+en el sector financiero, pero en la medida en que se
+definen sobre la base de ciertos efectos, no pueden
+descartarse plenamente y deben tomarse en consideración como líneas rojas. Así, por ejemplo, un sistema de IA de marketing personalizado que se sirva
+de técnicas subliminales para alterar de manera sustancial el comportamiento de un modo que pueda provocar perjuicios físicos o psicológicos (art. 5.a) o un
+sistema de oferta y comercialización de préstamos
+que aproveche alguna de las vulnerabilidades de un
+grupo de personas por edad o discapacidad física o
+mental (art. 5.b). En su redacción actual, aunque se
+ha matizado ligeramente en versiones ulteriores (en el
+«Compromiso conjunto»), es menos probable que los
+supuestos de uso de sistemas de identificación biométrica o de evaluación o clasificación de la fiabilidad
+de las personas físicas según su conducta social o
+su personalidad cubran aplicaciones de IA en el sector financiero porque la prohibición se vincula a su
+uso por (o por cuenta de) autoridades públicas, o en
+espacios de acceso público con fines de aplicación de
+la ley (aun así hay escenarios en los que podrían
+ser de aplicación). Estos requisitos, cuestionados
+por ser excesivamente restrictivos, dejarían fuera del
+ámbito de uso prohibido la aplicación en un espacio
+privado —de una entidad— de sistemas de reconocimiento biométrico o incluso sistemas de evaluación
+(social scoring) que pudieran implementarse para
+acompañar una evaluación de solvencia o perfilar la
+eligibilidad de solicitantes de productos bancarios.
+
+En el Anexo III de la Ley de IA, se ofrece una lista
+de sistemas de IA, definidos por su uso, destino o
+finalidad, que muy fácilmente reflejarán aplicaciones
+frecuentes de la IA en el sector financiero: sistemas
+destinados a la identificación biométrica remota de
+personas físicas (1.a Anexo III), sistemas para la contratación o selección de personas físicas o para tomar
+decisiones de promoción o resolución de relaciones
+laborales o la asignación de tareas y el seguimiento
+y la evaluación de rendimiento (4.a y b Anexo III), y,
+de forma directa y evidente, sistemas para evaluar
+la solvencia de las personas físicas o establecer su
+calificación crediticia —salvo puestos en servicio por
+proveedores a pequeña escala para su uso propio—
+(5.b Anexo III).
+Confirmar la aplicación de la Ley de IA a ciertos
+usos de los sistemas de IA que proponga una entidad financiera, significará su sujeción a ciertos requisitos más intensos si es calificado como de alto riesgo
+(art. 8 Ley de IA). Son obligaciones esencialmente
+de auditoría, evaluación y gestión del riesgo, gobernanza de datos (entrenamiento, validación y prueba),
+documentación técnica, registro de eventos, ciberseguridad y transparencia e información a las que las
+entidades financieras no son, en absoluto, ajenas.
+Responden a una estrategia regulatoria de supervisión y gestión del riesgo bien conocida en sectores
+regulados como el financiero. De hecho, la necesidad de evitar duplicaciones, contradicciones o solapamientos con la normativa sectorial se ha tenido
+en cuenta en la Ley de IA, en particular, en relación con el sector financiero ya sujeto a obligaciones de gestión de riesgos, evaluación y supervisión
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+ICE 101
+
+Teresa Rodríguez de las Heras Ballell
+similares a las contempladas en el futuro Reglamento
+(apartado 80 Ley de IA). En este sentido, la Ley de
+IA articula algunas soluciones para asegurar la consistencia entre las obligaciones de las entidades de
+crédito conforme a la Directiva 2013/36/EU20 cuando
+emplean, operan o ponen en el mercado sistemas de
+IA en el ejercicio de su actividad.
+
+Ni la Ley de IA ni, en principio, ninguna otra norma
+habilita expresamente al uso de sistemas de IA para
+
+asistir la toma de decisiones o automatizar tareas,
+procesos o actividades concretos. Puntual e incidentalmente, se encuentra en algún texto, incluso simplemente en los considerandos, referencia a la automatización —Reglamento (EU) 2020/1503/UE21 a la
+inversión automática en el considerando (20)— sin
+mayor concreción o desarrollo en el articulado. En
+otras ocasiones, se confirma esta posibilidad porque
+se hace referencia a «con o sin intervención humana»
+o «por medios automáticos», como en la DSA —art. 2
+sobre los sistemas de recomendación, art. 14(6) sobre
+los medios de notificación y acción, art. 15(2) sobre la
+decisión de retirada—. Y, en otros casos, se incluye
+una limitación expresa a la automatización total de
+un proceso de toma de decisiones como la gestión
+de reclamaciones en una plataforma —DSA,
+art. 17(5)—.
+En este contexto normativo, se debe abordar esta
+cuestión a partir de dos principios vertebradores: el
+principio de equivalencia funcional y el principio de no
+discriminación y neutralidad tecnológica. Estos principios nos conducen a una respuesta de partida positiva
+y habilitante que permite utilizar sistemas de IA para
+la toma de decisiones o para asistir la toma de decisiones, para automatizar tareas, procesos y actividades de forma general y sin necesidad de un reconocimiento expreso previo de la norma. No hay razón para
+negar esta equivalencia funcional ni para discriminar
+de forma general el uso de sistemas de IA en análogas condiciones. Límites específicos por razón de la
+materia o requisitos regulatorios sectoriales podrían
+restringir, en la práctica, en el sector financiero ciertas
+aplicaciones, pero la regla básica es la viabilidad del
+uso de IA en cualquier actividad y para cualquier toma
+de decisiones.
+
+20
+Directiva 2013/36/UE del Parlamento Europeo y del Consejo, de 26 de
+junio de 2013, relativa al acceso a la actividad de las entidades de crédito y a la
+supervisión prudencial de las entidades de crédito y las empresas de inversión,
+por la que se modifica la Directiva 2002/87/CE y se derogan las Directivas
+2006/48/CE y 2006/49/CE (Texto pertinente a efectos del EEE). Diario Oficial
+de la Unión Europea, L 176, de 27 de junio de 2013, pp. 338-436.
+
+21
+Reglamento (UE) 2020/1503 del Parlamento Europeo y del Consejo,
+de 7 de octubre de 2020, relativo a los proveedores europeos de
+servicios de financiación participativa para empresas, y por el que se
+modifican el Reglamento (UE) 2017/1129 y la Directiva (UE) 2019/1937
+(Texto pertinente a efectos del EEE), PE/37/2020/INIT. Diario Oficial de la
+Unión Europea, L 347, de 20 de octubre de 2020, pp. 1-49.
+
+Principios y reglas para el uso de sistemas de IA
+en la toma de decisiones
+Sin embargo, la eventual aplicación de la Ley de
+IA no agota el marco regulatorio de referencia para
+el uso de sistemas de IA en el sector financiero ni, de
+hecho, resuelve un buen número de cuestiones que
+la implementación y la ulterior operativa de tales sistemas en el curso de su actividad van a generar. Para
+ello y por ello, es esencial explorar otros instrumentos
+normativos y descubrir asideros jurídicos para responder a diversas cuestiones de gran relevancia. Primera,
+en qué medida puede recurrirse con una total equivalencia a sistemas automatizados para cualquier actividad, decisión o proceso sin necesidad de una previa
+habilitación legal. Segunda, en qué medida se atribuyen a la entidad financiera que opera el sistema las
+decisiones adoptadas o asistidas por sistemas de IA.
+Tercera, quién ha de asumir los riesgos y la responsabilidad derivada por los daños causados por los sistemas de IA empleados.
+Sobre el principio de no discriminación para el uso
+de IA en la toma de decisiones
+
+102
+
+ICE
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+InTeligencia ArTificial en el secTor Bancario: reflexiones soBre su régimen jurídico en la Unión Europea
+Naturalmente, la implantación de un sistema de IA
+requerirá asegurar que el proceso automatizado es
+capaz de garantizar el cumplimiento de las normas aplicables al mismo proceso si no fuera automatizado. Los
+sistemas de IA han de diseñarse, implementarse y operarse de modo tal que cumplan el régimen que corresponda a la naturaleza jurídica de la decisión o de la actividad y, por tanto, también a su tratamiento regulatorio
+en el ámbito financiero. Si se automatiza, a través de
+una aplicación de banca digital, la comercialización
+de ciertos productos financieros, se habrá de garantizar
+que se satisfacen los requisitos legales de información
+precontractual. Si se implanta un sistema automatizado
+de robo-adviser se habrán de cumplir los requisitos de
+un asesoramiento financiero, si efectivamente resulta
+así categorizado.
+A pesar de la aparente sencillez de este principio de
+reconocimiento no discriminatorio de la IA, su efecto es
+intenso y poderoso. Actúa, en la práctica, como un facilitador natural para la integración múltiple e intensiva
+de la IA en cualquier ámbito de la actividad financiera,
+como principio. En la medida en que se pueda garantizar el cumplimiento de las normas y los requisitos aplicables a la acción o el proceso equivalente no automatizado, la IA se puede proyectar sobre cualquier decisión.
+Sobre la atribución de los efectos jurídicos
+La especial complejidad en la cadena de diseño,
+desarrollo, implementación y funcionamiento de los
+sistemas de IA con un conjunto de actores que intervienen, muy frecuentemente sin acuerdo o coordinación
+previa, plantea una cuestión jurídica de indiscutible
+relevancia empresarial: a quién se atribuyen los efectos jurídicos y, por ende, los riesgos de una decisión,
+o una acción resultante de un proceso automatizado.
+Aunque esta cuestión puede interpretarse como un
+problema único de atribución desde una perspectiva
+empresarial, desde un punto de vista jurídico, es conveniente distinguir entre dos diferentes cuestiones,
+aunque relacionadas.
+
+En primer lugar, a quién se atribuye la decisión o
+la acción resultante. Es decir, si una entidad bancaria
+implanta una aplicación que incorpora un sistema de
+credit scoring que conduce a la concesión o denegación automatizada (sin intervención humana en cada
+decisión) de solicitudes de crédito al consumo, la
+acción de evaluar la solvencia y la decisión de aceptar o denegar son atribuibles a la entidad bancaria.
+Así, si se concede el crédito, el banco es la contraparte en el contrato resultante; a la vez que, si se
+deniega de forma injustificada causando una discriminación sistemática a ciertos colectivos, el banco sería
+el infractor, quien vulnera, por ejemplo, el derecho a
+no ser discriminado. Similar razonamiento aplicaríamos al uso de un sistema de IA en un programa de
+reclutamiento o de promoción de empleados, o a un
+sistema de detección y prevención de fraude.
+Esta atribución de los efectos jurídicos se basa en
+la formulación del concepto de «operador». Este concepto, que propone el Report on Liability for Artificial
+Intelligence and other emerging technologies y
+toma posteriormente la Resolución del Parlamento
+Europeo de 2020, ya citados, se fundamenta en dos
+bases: control y beneficio. Así, será el operador el
+centro de imputación de los efectos jurídicos en la
+medida en que controla (o debería poder controlar)
+los riesgos de operar un sistema de IA que decide
+integrar en su actividad y, por tanto, beneficiarse de
+su funcionamiento.
+Esta atribución de efectos jurídicos al operador tiene, además, otra importante consecuencia.
+El operador no puede escudarse en el carácter automatizado o crecientemente autónomo del sistema
+de IA empleado para no asumir las consecuencias de la
+acción o la decisión adoptada, ni puede plantear la atribución de tales efectos u otros actores intervinientes en
+el ciclo de vida del sistema de IA. Así, por ejemplo, no
+podrá atribuirse al desarrollador del sistema, al distribuidor o al proveedor de los datos. Todo ello, sin perjuicio
+de que el operador pudiera ejercitar acciones o recursos ulteriores frente a estos actores. Pero frente a la
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+ICE 103
+
+Teresa Rodríguez de las Heras Ballell
+persona afectada (cliente), es el operador quien asume
+los efectos jurídicos —legales o contractuales—.
+En segundo lugar, quién debe asumir los riesgos y
+las responsabilidades por los daños causados por el
+funcionamiento de sistemas de IA, que abordamos a
+continuación.
+Sobre la responsabilidad por los daños causados
+por el funcionamiento de los sistemas de IA
+El funcionamiento de un sistema de IA puede causar daños de muy diversa índole. En ciertos sectores, se pueden anticipar significativos perjuicios
+patrimoniales y daños personales (vehículos autónomos, drones, domótica, robótica asistencia). Sus
+aplicaciones en actividades financieras aparecen
+ligadas a riesgos sistémicos, amenazas a la estabilidad económica y la integridad financieras o respuestas cíclicas y shocks de mercado. Pero su inadecuado funcionamiento también puede, sencillamente,
+causar la pérdida masiva de datos, interrumpir el
+acceso a los servicios y productos, generar mensajes erróneos dirigidos a los clientes sobre el estado
+de sus cuentas, recomendar inversiones inadecuadas según el perfil de riesgo, u ocasionar el incumplimiento de ciertas obligaciones frente a las autoridades supervisoras. El uso en rankings, servicios
+de selección de personal, filtrado de contenidos o
+asistentes virtuales para la gestión de quejas abre la
+puerta a un debate de gran calado sobre su impacto
+en derechos y libertades fundamentales —libertad de
+expresión, derecho a no ser discriminado, derecho
+al honor, derechos de la personalidad—, pero también en la estructura competitiva del mercado o en
+la lealtad de sus prácticas. De ahí que el enfoque
+adoptado por la proyectada Ley de IA en Europa se
+base en la identificación de ciertas prácticas, usos
+o aplicaciones de la IA que, por su especial riesgo o criticidad, resultan prohibidas, calificadas como de alto
+riesgo y, por tanto, sujetas a ciertas obligaciones y
+requisitos, o sometidas a normas armonizadas que
+
+104
+
+ICE
+
+regulan su introducción en el mercado, la puesta en
+servicio y su utilización22.
+No obstante, ante la constatación de tales efectos
+potencialmente negativos, la cuestión fundamental es
+si, más allá de la adopción de normas específicas para
+los sistemas de IA dirigidas a controlar su uso y mitigar sus efectos negativos, los regímenes jurídicos tradicionales de responsabilidad están preparados para
+gestionar los riesgos y resolver eficazmente los conflictos derivados de estas situaciones en entornos tecnológicos complejos.
+En este sentido, la Unión Europea se enfrenta a
+importantes decisiones de política legislativa. Primera,
+valorar si es necesario acometer una profunda
+reforma del régimen de responsabilidad por productos defectuosos23 para acomodar los sistemas de IA.
+Las preguntas son múltiples. ¿Son los sistemas de
+IA productos? ¿Es una decisión del sistema de IA que
+causa daños necesariamente en el resultado de un
+defecto? ¿Funcionan adecuadamente las disposiciones de la Directiva ante un sistema de IA que se actualiza
+desde su puesta en el mercado? Segunda, considerar
+la conveniencia de establecer un régimen armonizado
+de responsabilidad específico para la IA, como apunta
+la resolución del Parlamento ya citada y, en tal caso,
+si debe ser una responsabilidad del operador y si la
+distinción entre una responsabilidad objetiva para los
+
+22
+De acuerdo con el artículo 1 de la propuesta, el Reglamento del
+Parlamento Europeo y del Consejo por el que se establecen normas
+armonizadas en materia de inteligencia artificial (Ley de Inteligencia Artificial)
+establece: «a) normas armonizadas para la introducción en el mercado,
+la puesta en servicio y la utilización de sistemas de inteligencia artificial
+(“sistemas de IA”) en la Unión; b) prohibiciones de determinadas prácticas
+de inteligencia artificial; c) requisitos específicos para los sistemas de IA de
+alto riesgo y obligaciones para los operadores de dichos sistemas; d) normas
+armonizadas de transparencia aplicables a los sistemas de IA destinados
+a interactuar con personas físicas, los sistemas de reconocimiento de
+emociones y los sistemas de categorización biométrica, así como a los
+sistemas de IA usados para generar o manipular imágenes, archivos de
+audio o vídeos; e) normas sobre el control y la vigilancia del mercado».
+23
+Directiva 85/374/CEE del Consejo, de 25 de julio de 1985, relativa
+a la aproximación de las disposiciones legales, reglamentarias y
+administrativas de los Estados miembros en materia de responsabilidad
+por los daños causados por productos defectuosos. Diario Oficial de la
+Unión Europea, L 210, de 7 de agosto de 1985, pp. 29-33.
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+InTeligencia ArTificial en el secTor Bancario: reflexiones soBre su régimen jurídico en la Unión Europea
+sistemas de alto riesgo y una por culpa para el resto
+es adecuada.
+4.
+
+Conclusiones. Principios para un uso
+responsable de la IA en la toma de decisiones
+
+El principio de no discriminación frente al uso de
+sistemas de IA en cualquier actividad y para cualquier toma de decisiones habilita una automatización
+intensa y extensa en el sector bancario mediante la
+implementación de soluciones de IA. En este marco
+favorable y propicio a la automatización, se debe asegurar, no obstante, el cumplimiento de los requisitos
+regulatorios que la naturaleza de la actividad sectorial exija (law-compliant AI systems) y se deben añadir algunas limitaciones específicas que, por razón, de
+su uso o destino (p. ej., credit scoring, contratación y
+promoción, reconocimiento biométrico) la futura Ley
+de IA podría prohibir o someter a ciertas obligaciones.
+En la medida en que estos sistemas de IA se apliquen,
+además, a proporcionar recomendaciones, personalizar ofertas, elaborar rankings, o moderar contenidos,
+otras normas adicionales (DSA, DMA, RGPD) podrían
+ser de aplicación si se emplean por entidades financieras que han transformado su modelo de negocio
+bajo una estructura de plataforma.
+Aun así, no existe un conjunto compacto y coherente de principios capaces de guiar las estrategias de
+automatización ni un cuerpo de reglas completo que
+dote de plena seguridad jurídica a la implementación
+de sistemas de IA en el sector bancario. Las características marcadamente distintivas de la IA no siempre
+permiten que una aplicación de las normas existentes
+bajo un enfoque de neutralidad tecnológica y equivalencia funcional sea totalmente satisfactoria, ni siempre factible o viable. Por ello, se viene reclamando en
+la Unión Europea la necesidad de completar el marco
+jurídico con otros principios específicos que cristalicen
+en un cuerpo de reglas idóneo para la IA. También
+sectorialmente, la ABE abogaba por esta estrategia.
+La formulación de unos principios éticos es, sin duda,
+
+un punto de partida, pero la integración de los sistemas de IA en el curso de una actividad económica, a lo
+largo del ciclo transaccional y para la gestión empresarial requiere contar con deberes y obligaciones que
+permitan articular los principios vertebradores del régimen jurídico. Este es el esfuerzo que ahora debe realizar la Unión Europea24. Es preciso concretar cómo
+deberán diseñarse, implementarse y ponerse en servicio sistemas de IA para satisfacer los principios de
+trazabilidad, explicabilidad, transparencia, supervisión
+humana, auditabilidad, no discriminación, explicación
+razonada de las decisiones, o acceso a un mecanismo de revisión de decisiones significativas. Será
+clave entender cómo interaccionan las disposiciones
+de la futura Ley de IA con el derecho contractual y las
+reglas de la responsabilidad (Codagnone et al., 2022)
+—p. ej., en qué medida la clasificación de un sistema
+de IA como de alto riesgo en la Ley de IA pudiera
+implicar la aplicación de un régimen de responsabilidad objetiva bajo el esquema de la resolución del
+Parlamento, o qué efectos tendría en la validez y eficacia de una decisión automatizada basada en profiling que no se articule un mecanismo de intervención
+humana conforme al art. 22 del RGPD; o qué implicaciones tendría en el contrato que el operador bancario no cumpla con los requisitos de la Ley de IA—. Y
+será fundamental para las entidades bancarias contar con reglas jurídico-privadas claras para el uso y
+la implementación de sistemas de IA en la toma de
+decisiones, seguramente acompañadas por detallados estándares y protocolos de actuación progresivamente armonizados en el sector.
+
+24
+Los proyectos del European Law Institute sobre Smart Contract
+and Blockchain, Algorithmic Contracts y Innovation Paper on Guiding
+Principles for Automated Decision-Making in Europe tratan de contribuir a
+este debate prelegislativo en la Unión. https://www.europeanlawinstitute.
+eu/projects-publications/. A nivel internacional, se han iniciado también
+trabajos en esta misma dirección, como el nuevo proyecto del plan
+de trabajo de CNUDMI/UNCITRAL (Comisión de las Naciones Unidas
+para el Derecho Mercantil Internacional/ United Nations Commission
+of International Trade Law) sobre la automatización y el uso de IA en
+el comercio internacional. https://uncitral.un.org/es/working_groups/4/
+electronic_commerce
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+ICE 105
+
+Teresa Rodríguez de las Heras Ballell
+Referencias bibliográficas
+AEFI, Asociación Española de Fintech e Insurtech. (2017).
+Libro Blanco de la Regulación Fintech en España. https://
+asociacionfintech.es/wp-content/uploads/2018/06/AEFI_
+LibroBlanco_02_10_2017.pdf
+Alonso, A., & Carbó, J. M. (2021). Understanding the performance
+of Machine Learning Models to predict credit default: A novel
+approach for supervisory evaluation. Documentos Ocasionales
+del Banco de España n.º 2105. Marzo. https://www.bde.es/f/
+webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/
+DocumentosTrabajo/21/Files/dt2105e.pdf
+Barocas, S., & Selbst, A. D. (2016). Big Data’s Disparate Impact.
+California Law Review, 104, 671-732.
+Basel Committee on Banking Supervision. (2018). Sound
+Practices. Implications of Fintech developments for banks and
+bank supervisors.
+Biglaiser, G., Calvano, E., & Crémer, J. (2019). Incumbency
+advantage and its value. Journal of Economics & Management
+Strategy, 28(1), 41-48.
+Bucher-Koenen, T. (2010). Financial Literacy, Cognitive
+Abilites, and Long-term Decision Making: Five Essays
+on Individual Behavior. Inauguraldissertation zur
+Erlangung des akademischen Grades eines Doktors der
+Wirtschaftswissenschaften der Universität Mannheim.
+Capgemini. (2018). World Fintech Report 2018.
+Capgemini. (2021). World Fintech Report 2021.
+Chander, A. (2017). The Racist Algorithm. Michigan Law Review,
+115(6), 1023-1045.
+Chiu, I. H.-Y. (2016). Fintech and Disruptive Business Models
+in Financial Products, Intermediation and Markets - Policy
+Implications for Financial Regulators. Journal of Technology
+Law & Policy, 21, 55-112.
+Codagnone, C., Liva, G., & Rodríguez de las Heras Ballell, T.
+(2022). Identification and assessment of existing and draft
+EU legislation in the digital field. Study requested by the AIDA
+special committee, European Parliament. https://www.europarl.
+europa.eu/thinktank/de/document/IPOL_STU(2022)703345
+Comisión Europea. (2020a). Report from the Commission to
+the European Parliament, the Council and the European
+Economic and Social Committee. Report on the safety and
+liability implications of Artificial Intelligence, the Internet of
+Things and robotics. COM(2020) 64 final.
+Comisión Europea. (2020b). White Paper on Artificial Intelligence
+-A European approach to excellence and trust. COM(2020)
+65 final.
+Comisión Europea. (2020c). Comunicación de la Comisión al
+Parlamento Europeo, al Consejo, al Comité Económico y
+Social Europeo y al Comité de las Regiones. Configurar el
+futuro digital de Europa. COM(2020) 67 final.
+
+106
+
+ICE
+
+Comisión Europea. (2020d). Propuesta de Reglamento del
+Parlamento Europeo y del Consejo relativo a un mercado
+único de servicios digitales (Ley de servicios digitales) y por
+el que se modifica la Directiva 2000/31/CE (Texto pertinente a
+efectos del EEE). COM(2020) 825 final.
+Comisión Europea. (2020e). Propuesta de Reglamento del Parlamento Europeo y del Consejo sobre mercados disputables
+y equitativos en el sector digital (Ley de Mercados Digitales).
+COM(2020) 842 final.
+Comisión Europea. (2021). Propuesta de Reglamento del
+Parlamento Europeo y del Consejo por el que se establecen
+normas armonizadas en materia de inteligencia artificial (Ley
+de Inteligencia Artificial) y se modifican determinados actos
+legislativos de la Unión. COM(2021) 206 final.
+Dapp, T. F. (2015). Fintech Reloaded—Traditional Banks as Digital
+Ecosystems. With Proven Walled Garden Strategies into the
+Future. Deutsche Bank Research. June 9.
+Deloitte. (2018). Artificial Intelligence. Innovation Report.
+Dermine, J. (2016). Digital banking and market disruption: a sense
+of déjà vu? Bank of France. Financial Stability Review, 20, 1-8.
+April.
+Deutsche Bank Research. (2017, August 10). Robo-Advice: A True
+Innovation in Asset Management. EU Monitor, Global Financial
+Markets.
+EBA, European Banking Authority. (2020a). Report on Big Data
+and Advanced Analytics. EBA/REP/2020/01. https://www.eba.
+europa.eu/sites/default/documents/files/document_library//
+Final%20Report%20on%20Big%20Data%20and%20
+Advanced%20Analytics.pdf
+EBA, European Banking Authority. (2020b). Risk assessment of
+the European Banking System. December.
+ESMA, European Securities and Markets Authority, EBA,
+European Banking Authority, & EIOPA, European Insurance
+and Occupational Pensions Authority. (2015, December 4).
+Joint Committee Discussion Paper on automation in financial
+advice. JC 2015 080. https://www.esma.europa.eu/sites/
+default/files/library/jc_2015_080_discussion_paper_on_
+automation_in_financial_advice.pdf
+FSB, Financial Stability Board. (2017). Financial Stability
+Implications from FinTech. https://www.fsb.org/wp-content/
+uploads/R270617.pdf
+Grupo de Expertos New Technologies Formation. (2019). Report
+on Liability for Artificial Intelligence and other emerging
+technologies. https://op.europa.eu/en/publication-detail/-/
+publication/1c5e30be-1197-11ea-8c1f-01aa75ed71a1/
+language-en
+IFC, International Finance Corporation. (2017). Digital Financial
+Services: Challenges and Opportunities for Emerging Market
+Banks.
+Institute of International Finance. (2018, May). Machine learning
+in credit risk.
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+InTeligencia ArTificial en el secTor Bancario: reflexiones soBre su régimen jurídico en la Unión Europea
+Joint Committee of the European Supervisory Authorities.
+(2018). Final Report on Big Data. JC/2018/04. https://
+www.eba.europa.eu/sites/default/documents/files/
+documents/10180/2157971/77590961-de6f-4207-bb480797ce154ed9/Joint%20Committee%20Final%20Report%20
+on%20Big%20Data%20%28JC-2018-04%20%29.pdf?retry=1
+KPMG-Funcas. (2018). Comparativa de la oferta de la banca
+vs. Fintech. https://assets.kpmg/content/dam/kpmg/es/
+pdf/2018/06/comparativa-oferta-%20banca-fintech.pdf
+KPMG-Funcas. (2019, diciembre). La banca ante las BigTech.
+Presentado en el marco del Observatorio de la Digitalización
+Financiera (ODF). https://assets.kpmg/content/dam/kpmg/
+es/pdf/2019/11/La-banca-ante-las-fintech.pdf
+Lewis, R., McPartland, J. W., & Ranjan, R. (2017). Blockchain
+and Financial Market Innovation. Federal Reserve Bank of
+Chicago, Economic Perspectives, 41(7).
+Parlamento Europeo. (2020). Informe con recomendaciones
+destinadas a la Comisión sobre un régimen de
+responsabilidad civil en materia de inteligencia artificial
+(2020/2014(INL)). https://www.europarl.europa.eu/doceo/
+document/A-9-2020-0178_ES.pdf
+PwC, PricewaterhouseCoopers. (2016). Beyond automated
+advice. How FinTech is shaping asset & wealth management.
+Global FinTech Survey 2016. https://www.pwc.com/
+gx/en/financial-services/pdf/fin-tech-asset-and-wealthmanagement.pdf
+
+PwC, PricewaterhouseCoopers. (2021). PwC’s 2021 Digital
+Banking Consumer Survey. https://www.pwc.com/us/en/
+industries/banking-capital-markets/library/digital-bankingconsumer-survey.html Rodríguez de las Heras Ballell, T. (2017). The Legal Anatomy
+of Electronic Platforms: A Prior Study to Assess the
+Need of a Law of Platforms in the EU. The Italian Law
+Journal, 3(1), 149-176.
+Rodríguez de las Heras Ballell, T. (2019a). Challenges of Fintech
+to Financial Regulatory Strategies. Marcial Pons.
+Rodríguez de las Heras Ballell, T. (2019b). Legal challenges
+of artificial intelligence: modelling the disruptive features of
+emerging technologies and assessing their possible legal
+impact. Uniform Law Review, 24(2), 302-314.
+WEF, World Economic Forum. (2017). Beyond Fintech:
+A Pragmatic Assessment of Disruptive Potential in
+Financial Services. https://www.weforum.org/reports/beyond-Fintech-a-pragmatic-assessment-of-disruptive-potential-in-financial-services
+WEF, World Economic Forum. (2020). Forging New Pathways:
+The next evolution of innovation in Financial Services. https://
+www.weforum.org/reports/forging-new-pathways-the-nextevolution-of-innovation-in-financial-services
+Wright, A., & De Filippi, P. (2015). Decentralized Blockchain
+Technology and the Rise of Lex Cryptographia. SSRN. https://
+ssrn.com/abstract=2580664
+
+EL FUTURO DEL DINERO Y LA TRANSFORMACIÓN DIGITAL DEL SECTOR FINANCIERO
+Mayo-Junio 2022. N.º 926
+
+ICE 107
+
+

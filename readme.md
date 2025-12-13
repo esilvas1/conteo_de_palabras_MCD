@@ -1,0 +1,198 @@
+# Caso de Estudio: Conteo de Palabras con Hadoop MapReduce
+
+| **Información del Proyecto** | |
+|:---|---:|
+| **Maestría:** Ciencia de Datos<br>**Universidad:** Pontificia Universidad Javeriana<br>**Materia:** Gestión de Datos<br>**Estudiantes:** Edwin Silva Salas, Carlos Preciado Cárdenas, Cristian Restrepo Zapata<br>**Fecha de inicio:** 13 Diciembre 2025 | <img src="./images/pontificia-universidad-logo.png" alt="Logo Pontificia Universidad Javeriana" width="120"/> |
+
+## Introducción
+
+El análisis de frecuencia de palabras es una técnica fundamental en el procesamiento de lenguaje natural y minería de textos, utilizada para identificar patrones, extraer información relevante y comprender la estructura de documentos textuales. En el contexto de Big Data, donde los volúmenes de información crecen exponencialmente, se requieren herramientas capaces de procesar grandes cantidades de datos de manera eficiente y escalable.
+
+Apache Hadoop MapReduce representa una solución robusta para el procesamiento distribuido de datos masivos, permitiendo dividir tareas computacionales complejas en operaciones más simples que pueden ejecutarse en paralelo sobre múltiples nodos. El paradigma MapReduce, inspirado en las funciones map y reduce de la programación funcional, ofrece un modelo de programación simple pero poderoso para el análisis de grandes conjuntos de datos.
+
+Este trabajo presenta la implementación técnica de un sistema de conteo y análisis de frecuencia de palabras aplicado a un documento académico sobre inteligencia artificial en el sector bancario. La solución desarrollada integra múltiples tecnologías: extracción de texto desde formato PDF, almacenamiento en HDFS (Hadoop Distributed File System), y procesamiento mediante MapReduce con Python.
+
+### Entorno de Trabajo
+
+- **Sistema Operativo:** Ubuntu 22.04 LTS en WSL (instaldo WSL)
+- **Hadoop:** Versión 3.3.6
+- **Python:** Versión 3.x
+- **Documento Origen:** Inteligencia_Rodriguez_ICE_2022.pdf
+
+## Paso 1: Conversión de PDF a Texto Plano
+
+### 1.1 Descripción
+
+El primer paso del proceso consiste en extraer el contenido textual del documento PDF académico "Inteligencia Artificial en el Sector Bancario" y guardarlo en un archivo de texto plano que pueda ser procesado por Hadoop.
+
+### 1.2 Herramienta Utilizada
+
+Se utiliza la herramienta **pdftotext** del paquete `poppler-utils`, que permite extraer texto de archivos PDF manteniendo la estructura del contenido.
+
+### 1.3 Implementación
+
+Se creó un script de Python llamado `pdf_to_txt.py` ubicado en la carpeta `/code/`:
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Conversión de PDF a Texto Plano
+Taller: Caso Conteo de Palabras con Hadoop
+"""
+
+import subprocess
+import os
+
+# Rutas de archivos
+PDF_FILE = "/home/esilvas/Documents/hadoop-python/files/Inteligencia_Rodriguez_ICE_2022.pdf"
+OUTPUT_FILE = "/home/esilvas/Documents/hadoop-python/files/texto_plano.txt"
+
+def pdf_to_text():
+    """
+    Convierte un archivo PDF a texto plano usando pdftotext
+    """
+    try:
+        print(f"Convirtiendo PDF a texto plano...")
+        print(f"Archivo origen: {PDF_FILE}")
+        print(f"Archivo destino: {OUTPUT_FILE}")
+        
+        # Ejecutar pdftotext para extraer el texto
+        subprocess.run([
+            'pdftotext',
+            PDF_FILE,
+            OUTPUT_FILE
+        ], check=True)
+        
+        # Verificar que se creó el archivo
+        if os.path.exists(OUTPUT_FILE):
+            # Obtener tamaño del archivo
+            size = os.path.getsize(OUTPUT_FILE)
+            print(f"\n✅ Conversión exitosa!")
+            print(f"Archivo creado: {OUTPUT_FILE}")
+            print(f"Tamaño: {size} bytes")
+            
+            # Contar líneas y palabras
+            with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+                words = sum(len(line.split()) for line in lines)
+            
+            print(f"Líneas: {len(lines)}")
+            print(f"Palabras aproximadas: {words}")
+        else:
+            print("❌ Error: No se pudo crear el archivo de salida")
+            
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Error al ejecutar pdftotext: {e}")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
+if __name__ == "__main__":
+    pdf_to_text()
+```
+
+### 1.4 Ejecución del Script
+
+Para ejecutar el script, se utilizó el siguiente comando desde la terminal:
+
+```bash
+cd /home/esilvas/Documents/hadoop-python/code
+python3 pdf_to_txt.py
+```
+
+### 1.5 Resultado de la Conversión
+
+```
+Convirtiendo PDF a texto plano...
+Archivo origen: /home/esilvas/Documents/hadoop-python/files/Inteligencia_Rodriguez_ICE_2022.pdf
+Archivo destino: /home/esilvas/Documents/hadoop-python/files/texto_plano.txt
+
+✅ Conversión exitosa!
+Archivo creado: /home/esilvas/Documents/hadoop-python/files/texto_plano.txt
+Tamaño: 66525 bytes
+Líneas: 1116
+Palabras aproximadas: 9574
+```
+
+### 1.6 Estructura del Archivo Resultante
+
+El archivo `texto_plano.txt` generado contiene:
+
+- **Tamaño:** 66,525 bytes (≈ 65 KB)
+- **Líneas:** 1,116
+- **Palabras:** Aproximadamente 9,574
+
+#### Muestra del Contenido (Primeras líneas):
+
+```
+Teresa Rodríguez de las Heras Ballell*
+
+INTELIGENCIA ARTIFICIAL EN EL SECTOR
+BANCARIO: REFLEXIONES SOBRE SU RÉGIMEN
+JURÍDICO EN LA UNIÓN EUROPEA
+El objetivo de este trabajo es aproximarnos al estado actual del régimen jurídico
+aplicable en la Unión Europea al uso de sistemas de inteligencia artificial en el sector
+financiero, y reflexionar sobre la necesidad de formular principios y reglas que aseguren
+una automatización responsable de los procesos de toma de decisiones y que sirvan de
+guía para implementar soluciones de inteligencia artificial en la actividad bancaria.
+```
+
+### 1.7 Consideraciones Técnicas
+
+#### Ventajas de pdftotext:
+- **Simplicidad:** Fácil de usar e integrar en scripts
+- **Eficiencia:** Procesamiento rápido de documentos
+- **Robustez:** Maneja bien documentos con múltiples columnas
+- **Codificación:** Soporta UTF-8, preservando caracteres especiales
+
+#### Aspectos Importantes:
+- El formato de columnas del PDF original no afecta el conteo de palabras
+- El texto se extrae de forma lineal, facilitando el procesamiento posterior
+- Se preservan caracteres especiales y acentos del español
+
+### 1.8 Estructura de Archivos Actual
+
+```
+hadoop-python/
+├── code/
+│   ├── pdf_to_txt.py       # Script de conversión
+│   └── script.py            # Script de prueba inicial
+└── files/
+    ├── C1.caso-conteo_palabras.pdf
+    ├── Informe_Instalacion_Hadoop.pdf
+    ├── Inteligencia_Rodriguez_ICE_2022.pdf  # PDF origen
+    ├── L1.Instalación_Herramientas.pdf
+    └── texto_plano.txt                       # Texto extraído ✅
+```
+
+---
+
+## Paso 2: Carga de Datos a HDFS
+
+*[Pendiente - Se documentará en el siguiente paso]*
+
+---
+
+## Paso 3: Implementación MapReduce
+
+*[Pendiente - Se documentará posteriormente]*
+
+---
+
+## Paso 4: Ejecución y Resultados
+
+*[Pendiente - Se documentará posteriormente]*
+
+---
+
+## Conclusiones
+
+*[Se completará al finalizar todos los pasos]*
+
+---
+
+## Referencias
+
+- Apache Hadoop Documentation: https://hadoop.apache.org/docs/r3.3.6/
+- Poppler Utils: https://poppler.freedesktop.org/
+- Python Subprocess Documentation: https://docs.python.org/3/library/subprocess.html
