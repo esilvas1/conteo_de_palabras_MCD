@@ -2,7 +2,7 @@
 
 | **Información del Proyecto** | |
 |:---|---:|
-| **Maestría:** Ciencia de Datos<br>**Universidad:** Pontificia Universidad Javeriana<br>**Materia:** Gestión de Datos<br>**Estudiantes:** Edwin Silva Salas, Carlos Preciado Cárdenas, Cristian Restrepo Zapata<br>**Fecha de inicio:** 13 Diciembre 2025 | <img src="./images/pontificia-universidad-logo.png" alt="Logo Pontificia Universidad Javeriana" width="120"/> |
+| **Maestría:** Ciencia de Datos<br>**Universidad:** Pontificia Universidad Javeriana<br>**Materia:** Gestión de Datos<br>**Estudiantes:** Edwin Silva Salas, Carlos Preciado Cárdenas, Cristian Restrepo Zapata<br>**Fecha de inicio:** Diciembre 2025 | <img src="./images/pontificia-universidad-logo.png" alt="Logo Pontificia Universidad Javeriana" width="120"/> |
 
 ## Introducción
 
@@ -21,15 +21,15 @@ Este trabajo presenta la implementación técnica de un sistema de conteo y aná
 
 ## Paso 1: Conversión de PDF a Texto Plano
 
-### 1.1 Descripción
+### Descripción
 
 El primer paso del proceso consiste en extraer el contenido textual del documento PDF académico "Inteligencia Artificial en el Sector Bancario" y guardarlo en un archivo de texto plano que pueda ser procesado por Hadoop.
 
-### 1.2 Herramienta Utilizada
+### Herramienta Utilizada
 
 Se utiliza la herramienta **pdftotext** del paquete `poppler-utils`, que permite extraer texto de archivos PDF manteniendo la estructura del contenido.
 
-### 1.3 Implementación
+### Implementación
 
 Se creó un script de Python llamado `pdf_to_txt.py` ubicado en la carpeta `/code/`:
 
@@ -68,7 +68,7 @@ def pdf_to_text():
         if os.path.exists(OUTPUT_FILE):
             # Obtener tamaño del archivo
             size = os.path.getsize(OUTPUT_FILE)
-            print(f"\n✅ Conversión exitosa!")
+            print(f"\nConversión exitosa!")
             print(f"Archivo creado: {OUTPUT_FILE}")
             print(f"Tamaño: {size} bytes")
             
@@ -80,18 +80,18 @@ def pdf_to_text():
             print(f"Líneas: {len(lines)}")
             print(f"Palabras aproximadas: {words}")
         else:
-            print("❌ Error: No se pudo crear el archivo de salida")
+            print("Error: No se pudo crear el archivo de salida")
             
     except subprocess.CalledProcessError as e:
-        print(f"❌ Error al ejecutar pdftotext: {e}")
+        print(f"Error al ejecutar pdftotext: {e}")
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     pdf_to_text()
 ```
 
-### 1.4 Ejecución del Script
+### Ejecución del Script
 
 Para ejecutar el script, se utilizó el siguiente comando desde la terminal:
 
@@ -100,21 +100,21 @@ cd /home/esilvas/Documents/hadoop-python/code
 python3 pdf_to_txt.py
 ```
 
-### 1.5 Resultado de la Conversión
+### Resultado de la Conversión
 
 ```
 Convirtiendo PDF a texto plano...
 Archivo origen: /home/esilvas/Documents/hadoop-python/files/Inteligencia_Rodriguez_ICE_2022.pdf
 Archivo destino: /home/esilvas/Documents/hadoop-python/files/texto_plano.txt
 
-✅ Conversión exitosa!
+Conversión exitosa!
 Archivo creado: /home/esilvas/Documents/hadoop-python/files/texto_plano.txt
 Tamaño: 66525 bytes
 Líneas: 1116
 Palabras aproximadas: 9574
 ```
 
-### 1.6 Estructura del Archivo Resultante
+### Estructura del Archivo Resultante
 
 El archivo `texto_plano.txt` generado contiene:
 
@@ -135,34 +135,6 @@ aplicable en la Unión Europea al uso de sistemas de inteligencia artificial en 
 financiero, y reflexionar sobre la necesidad de formular principios y reglas que aseguren
 una automatización responsable de los procesos de toma de decisiones y que sirvan de
 guía para implementar soluciones de inteligencia artificial en la actividad bancaria.
-```
-
-### 1.7 Consideraciones Técnicas
-
-#### Ventajas de pdftotext:
-- **Simplicidad:** Fácil de usar e integrar en scripts
-- **Eficiencia:** Procesamiento rápido de documentos
-- **Robustez:** Maneja bien documentos con múltiples columnas
-- **Codificación:** Soporta UTF-8, preservando caracteres especiales
-
-#### Aspectos Importantes:
-- El formato de columnas del PDF original no afecta el conteo de palabras
-- El texto se extrae de forma lineal, facilitando el procesamiento posterior
-- Se preservan caracteres especiales y acentos del español
-
-### 1.8 Estructura de Archivos Actual
-
-```
-hadoop-python/
-├── code/
-│   ├── pdf_to_txt.py       # Script de conversión
-│   └── script.py            # Script de prueba inicial
-└── files/
-    ├── C1.caso-conteo_palabras.pdf
-    ├── Informe_Instalacion_Hadoop.pdf
-    ├── Inteligencia_Rodriguez_ICE_2022.pdf  # PDF origen
-    ├── L1.Instalación_Herramientas.pdf
-    └── texto_plano.txt                       # Texto extraído ✅
 ```
 
 ---
