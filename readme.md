@@ -141,7 +141,30 @@ guía para implementar soluciones de inteligencia artificial en la actividad ban
 
 ## Paso 2: Carga de Datos a HDFS
 
-*[Pendiente - Se documentará en el siguiente paso]*
+### 2.1 Descripción
+
+En este paso, el archivo de texto plano extraído del PDF (`texto_plano.txt`) se carga en el sistema de archivos distribuido de Hadoop (HDFS). Esto permite que los datos estén disponibles para ser procesados de manera distribuida por los nodos de Hadoop.
+
+### 2.2 Comandos utilizados
+
+```bash
+# Crear el directorio de entrada en HDFS (si no existe)
+hdfs dfs -mkdir -p /user/esilvas/wordcount/input
+
+# Subir el archivo de texto a HDFS
+hdfs dfs -put /home/esilvas/Documents/hadoop-python/files/texto_plano.txt /user/esilvas/wordcount/input/
+
+# Verificar que el archivo está en HDFS
+hdfs dfs -ls /user/esilvas/wordcount/input/
+```
+
+### 2.3 Importancia
+
+Cargar los datos a HDFS es fundamental para aprovechar el procesamiento distribuido de Hadoop. HDFS permite que los datos sean accesibles por todos los nodos del clúster, facilitando la ejecución eficiente de tareas MapReduce sobre grandes volúmenes de información.
+
+### 2.4 Automatización con Python
+
+Se creó el script `carga_datos_HDFS.py` para automatizar este proceso desde Python, facilitando la integración y repetibilidad del flujo de trabajo.
 
 ---
 
