@@ -14,7 +14,7 @@ Este trabajo presenta la implementación técnica de un sistema de conteo y aná
 
 ### Entorno de Trabajo
 
-- **Sistema Operativo:** Ubuntu 22.04 LTS en WSL (instaldo WSL)
+- **Sistema Operativo:** Ubuntu 22.04 LTS en WSL (instalado con WSL)
 - **Hadoop:** Versión 3.3.6
 - **Python:** Versión 3.x
 - **Documento Origen:** Inteligencia_Rodriguez_ICE_2022.pdf
@@ -28,76 +28,58 @@ El primer paso del proceso consiste en extraer el contenido textual del document
 ### Herramienta Utilizada
 
 Se utiliza la herramienta **pdftotext** del paquete `poppler-utils`, que permite extraer texto de archivos PDF manteniendo la estructura del contenido.
-
 ### Implementación
 
-Se creó un script de Python llamado `pdf_to_txt.py` ubicado en la carpeta `/code/`:
+Se implementa archivo notebook para ir ejecutando cada proceso e implementacion de Hadoop en en el conteo de palabras.
+
+De esta forma, el notebook documenta y automatiza cada paso, permitiendo ejecutar el proceso completo de principio a fin desde un solo archivo interactivo. Actualmente, solo los scripts `mapper.py` y `reducer.py` permanecen como archivos independientes, ya que son requeridos por Hadoop Streaming para el procesamiento distribuido.
+
+A continuacion el codigo utilizado para la conversión del archivo .pdf a formato .txt con todas sus respecivas filas en el orden en que se encontraban en el archivo original, utilzando la librerias **subprocesos** que permite utilizar librerias y funciones propias del sistema operativo **Linux** y para este trabajo del sistema operativo **Ubuntu**.
 
 ```python
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Conversión de PDF a Texto Plano
-Taller: Caso Conteo de Palabras con Hadoop
-"""
-
 import subprocess
-import os
-
-# Rutas de archivos
+import os   
+ 
+ # Rutas de archivos
 PDF_FILE = "/home/esilvas/Documents/hadoop-python/files/Inteligencia_Rodriguez_ICE_2022.pdf"
 OUTPUT_FILE = "/home/esilvas/Documents/hadoop-python/files/texto_plano.txt"
 
-def pdf_to_text():
-    """
-    Convierte un archivo PDF a texto plano usando pdftotext
-    """
-    try:
-        print(f"Convirtiendo PDF a texto plano...")
-        print(f"Archivo origen: {PDF_FILE}")
-        print(f"Archivo destino: {OUTPUT_FILE}")
+
+try:
+    print(f"Convirtiendo PDF a texto plano...")
+    print(f"Archivo origen: {PDF_FILE}")
+    print(f"Archivo destino: {OUTPUT_FILE}")
+    
+    # Ejecutar pdftotext para extraer el texto
+    subprocess.run([
+        'pdftotext',
+        PDF_FILE,
+        OUTPUT_FILE
+    ], check=True)
+    
+    # Verificar que se creó el archivo
+    if os.path.exists(OUTPUT_FILE):
+        # Obtener tamaño del archivo
+        size = os.path.getsize(OUTPUT_FILE)
+        print(f"\nConversión exitosa!")
+        print(f"Archivo creado: {OUTPUT_FILE}")
+        print(f"Tamaño: {size} bytes")
         
-        # Ejecutar pdftotext para extraer el texto
-        subprocess.run([
-            'pdftotext',
-            PDF_FILE,
-            OUTPUT_FILE
-        ], check=True)
+        # Contar líneas y palabras
+        with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+            words = sum(len(line.split()) for line in lines)
         
-        # Verificar que se creó el archivo
-        if os.path.exists(OUTPUT_FILE):
-            # Obtener tamaño del archivo
-            size = os.path.getsize(OUTPUT_FILE)
-            print(f"\nConversión exitosa!")
-            print(f"Archivo creado: {OUTPUT_FILE}")
-            print(f"Tamaño: {size} bytes")
-            
-            # Contar líneas y palabras
-            with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-                words = sum(len(line.split()) for line in lines)
-            
-            print(f"Líneas: {len(lines)}")
-            print(f"Palabras aproximadas: {words}")
-        else:
-            print("Error: No se pudo crear el archivo de salida")
-            
-    except subprocess.CalledProcessError as e:
-        print(f"Error al ejecutar pdftotext: {e}")
-    except Exception as e:
-        print(f"Error: {e}")
+        print(f"Líneas: {len(lines)}")
+        print(f"Palabras aproximadas: {words}")
+    else:
+        print("Error: No se pudo crear el archivo de salida")
+        
+except subprocess.CalledProcessError as e:
+    print(f"Error al ejecutar pdftotext: {e}")
+except Exception as e:
+    print(f"Error: {e}")
 
-if __name__ == "__main__":
-    pdf_to_text()
-```
-
-### Ejecución del Script
-
-Para ejecutar el script, se utilizó el siguiente comando desde la terminal:
-
-```bash
-cd /home/esilvas/Documents/hadoop-python/code
-python3 pdf_to_txt.py
 ```
 
 ### Resultado de la Conversión
@@ -164,25 +146,143 @@ Cargar los datos a HDFS es fundamental para aprovechar el procesamiento distribu
 
 ### 2.4 Automatización con Python
 
-Se creó el script `carga_datos_HDFS.py` para automatizar este proceso desde Python, facilitando la integración y repetibilidad del flujo de trabajo.
+
+La automatización de la carga de datos a HDFS, así como la verificación y gestión de archivos, también se encuentra integrada en el notebook `conteo_palabras_hadoop.ipynb`.
 
 ---
 
 ## Paso 3: Implementación MapReduce
 
-*[Pendiente - Se documentará posteriormente]*
+
+### 3.1 Descripción
+
+En este paso se implementa el modelo MapReduce para el conteo de palabras usando Python. Se desarrollan dos scripts: `mapper.py` y `reducer.py`, que serán utilizados por Hadoop Streaming para procesar el archivo de texto cargado en HDFS.
+
+### 3.2 Código del Mapper
+
+El Mapper lee cada línea del archivo de entrada, la divide en palabras y emite cada palabra junto con el valor 1:
+
+```python
+#!/usr/bin/env python3
+import sys
+for line in sys.stdin:
+    line = line.strip()
+    words = line.split()
+    for word in words:
+        print(f"{word}\t1")
+```
+
+### 3.3 Código del Reducer
+
+El Reducer recibe las salidas del Mapper agrupadas por palabra, suma los valores y emite el total de ocurrencias de cada palabra:
+
+```python
+#!/usr/bin/env python3
+import sys
+current_word = None
+current_count = 0
+word = None
+for line in sys.stdin:
+    line = line.strip()
+    word, count = line.split('\t', 1)
+    try:
+        count = int(count)
+    except ValueError:
+        continue
+    if current_word == word:
+        current_count += count
+    else:
+        if current_word:
+            print(f"{current_word}\t{current_count}")
+        current_word = word
+        current_count = count
+if current_word == word:
+    print(f"{current_word}\t{current_count}")
+```
+
+Ambos scripts se guardan en la carpeta `/code/` y se les otorgan permisos de ejecución.
 
 ---
 
 ## Paso 4: Ejecución y Resultados
 
-*[Pendiente - Se documentará posteriormente]*
+
+### 4.1 Ejecución del trabajo MapReduce con Hadoop Streaming
+
+Se ejecuta el trabajo MapReduce usando Hadoop Streaming, especificando los scripts de Mapper y Reducer creados anteriormente. El archivo de entrada es el texto cargado en HDFS y la salida será un archivo de texto con el conteo de palabras.
+
+#### Comando utilizado:
+
+```bash
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \
+    -input /user/esilvas/wordcount/input/texto_plano.txt \
+    -output /user/esilvas/wordcount/output \
+    -file mapper.py \
+    -file reducer.py \
+    -mapper "./mapper.py" \
+    -reducer "./reducer.py"
+```
+
+#### Descarga y visualización del resultado
+
+Para descargar el archivo de salida de HDFS a la máquina local:
+
+```bash
+hdfs dfs -cat /user/esilvas/wordcount/output/part-* > ./files/resultado_conteo_palabras.txt
+```
+
+### 4.2 Muestra de los resultados obtenidos
+
+Las primeras líneas del archivo de resultados son:
+
+```text
+%	5
+&	10
+(...)».	1
+(1.a	1
+(20)—	1
+(2010).	1
+(2015).	2
+(2015,	1
+(2016).	4
+(2017).	7
+(2017,	1
+(2018)	1
+(2018),	1
+(2018).	5
+(2018,	1
+(2019),	1
+(2019).	2
+(2019,	1
+(2019a).	1
+(2019a,	1
+(2019b).	1
+(2020).	2
+(2020/2014(INL)).	1
+(2020a).	2
+(2020b).	2
+(2020c).	1
+(2020d).	1
+(2020e).	1
+(2021),	1
+(2021).	4
+```
+
+El archivo completo contiene el conteo de todas las palabras y símbolos presentes en el documento procesado.
 
 ---
 
 ## Conclusiones
 
-*[Se completará al finalizar todos los pasos]*
+ 
+El proceso de conteo de palabras usando Hadoop MapReduce permitió automatizar el análisis de frecuencia de términos en un documento académico extenso. Se demostró la integración de herramientas de extracción de texto, almacenamiento distribuido y procesamiento paralelo, logrando:
+
+- Extraer texto de un PDF de manera automatizada.
+- Cargar y gestionar datos en HDFS.
+- Implementar y ejecutar un flujo MapReduce real con scripts Python personalizados.
+- Obtener resultados exportables y analizables en formato tabular.
+
+Este flujo es escalable y puede adaptarse a volúmenes de datos mucho mayores, mostrando la potencia de Hadoop para tareas de procesamiento masivo de texto.
 
 ---
 
