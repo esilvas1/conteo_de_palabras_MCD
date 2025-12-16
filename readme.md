@@ -6,11 +6,11 @@
 
 ## Introducción
 
-El análisis de frecuencia de palabras es una técnica fundamental en el procesamiento de lenguaje natural y minería de textos, utilizada para identificar patrones, extraer información relevante y comprender la estructura de documentos textuales. En el contexto de Big Data, donde los volúmenes de información crecen exponencialmente, se requieren herramientas capaces de procesar grandes cantidades de datos de manera eficiente y escalable.
+El análisis de frecuencia de palabras es una técnica fundamental en el procesamiento de lenguaje natural y minería de textos, utilizada para identificar patrones, extraer información relevante y comprender la estructura de documentos textuales. En el contexto de Big Data, donde los volúmenes de información crecen exponencialmente, se requieren herramientas capaces de procesar grandes cantidades de datos de manera eficiente y escalable. 
 
 Apache Hadoop MapReduce representa una solución robusta para el procesamiento distribuido de datos masivos, permitiendo dividir tareas computacionales complejas en operaciones más simples que pueden ejecutarse en paralelo sobre múltiples nodos. El paradigma MapReduce, inspirado en las funciones map y reduce de la programación funcional, ofrece un modelo de programación simple pero poderoso para el análisis de grandes conjuntos de datos.
 
-Este trabajo presenta la implementación técnica de un sistema de conteo y análisis de frecuencia de palabras aplicado a un documento académico sobre inteligencia artificial en el sector bancario. La solución desarrollada integra múltiples tecnologías: extracción de texto desde formato PDF, almacenamiento en HDFS (Hadoop Distributed File System), y procesamiento mediante MapReduce con Python.
+Este trabajo presenta la implementación técnica de un sistema de conteo y análisis de frecuencia de palabras aplicado a un documento académico sobre inteligencia artificial en el sector bancario. La solución desarrollada integra múltiples tecnologías: extracción de texto desde formato PDF, almacenamiento en HDFS (Hadoop Distributed File System).
 
 ### Entorno de Trabajo
 
@@ -30,9 +30,9 @@ El primer paso del proceso consiste en extraer el contenido textual del document
 Se utiliza la herramienta **pdftotext** del paquete `poppler-utils`, que permite extraer texto de archivos PDF manteniendo la estructura del contenido.
 ### Implementación
 
-Se implementa archivo notebook para ir ejecutando cada proceso e implementacion de Hadoop en en el conteo de palabras.
+Se implementa archivo notebook (.ipynb) [`conteo_palabras_hadoop`](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/code/conteo_palabras_hadoop.ipynb) para ir ejecutando cada proceso e implementacion de Hadoop en en el conteo de palabras.
 
-De esta forma, el notebook documenta y automatiza cada paso, permitiendo ejecutar el proceso completo de principio a fin desde un solo archivo interactivo. Actualmente, solo los scripts `mapper.py` y `reducer.py` permanecen como archivos independientes, ya que son requeridos por Hadoop Streaming para el procesamiento distribuido.
+De esta forma, el notebook documenta y automatiza cada paso, permitiendo ejecutar el proceso completo de principio a fin desde un solo archivo interactivo. Actualmente, solo los scripts [`mapper.py`](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/code/mapper.py) y [`reducer.py`](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/code/reducer.py) permanecen como archivos independientes, ya que son requeridos por Hadoop Streaming para el procesamiento distribuido.
 
 A continuacion el codigo utilizado para la conversión del archivo .pdf a formato .txt con todas sus respecivas filas en el orden en que se encontraban en el archivo original, utilzando la librerias **subprocesos** que permite utilizar librerias y funciones propias del sistema operativo **Linux** y para este trabajo del sistema operativo **Ubuntu**.
 
@@ -202,6 +202,8 @@ if current_word == word:
 
 Ambos scripts se guardan en la carpeta `/code/` y se les otorgan permisos de ejecución.
 
+> Nota: Los scripts [`mapper.py`](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/code/mapper.py) y [`reducer.py`](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/code/reducer.py) están disponibles en el repositorio de GitHub y deben descargarse desde allí para su uso con Hadoop Streaming.
+
 ---
 
 ## Paso 4: Ejecución y Resultados
@@ -274,6 +276,20 @@ El archivo completo contiene el conteo de todas las palabras y símbolos present
 
 ## Conclusiones
 
+De acuerdo con lo revisado sí, los resultados obtenidos validan empíricamente la Ley de Zipf aplicada al idioma español.
+
+Al observar el output del código, notamos que las palabras con mayor frecuencia absoluta (Top 5) son:
+
+de (815 repeticiones)
+la (367 repeticiones)
+y (248 repeticiones)
+en (234 repeticiones)
+el (218 repeticiones)
+
+Esto confirma que el la mayor cantidad de datos en un texto en español está compuesto por "Stop Words" (artículos, preposiciones y conjunciones) que aportan estructura gramatical pero no significado semántico por sí solas, es decir no darán un norte completo del panorama que se quiera revisar en el texto.
+
+Sin embargo, el análisis se vuelve valioso al filtrar estas palabras funcionales. Inmediatamente después, emergen los términos que definen el tópico del documento: "ia" (135), "sistemas" (74), "sector" (53) y "ley" (38). Esto demuestra que la herramienta fue capaz de "leer" la temática del documento (Regulación de IA en el sector bancario) a través de la frecuencia estadística, separando correctamente el ruido gramatical de la señal informativa.
+
  
 El proceso de conteo de palabras usando Hadoop MapReduce permitió automatizar el análisis de frecuencia de términos en un documento académico extenso. Se demostró la integración de herramientas de extracción de texto, almacenamiento distribuido y procesamiento paralelo, logrando:
 
@@ -285,6 +301,12 @@ El proceso de conteo de palabras usando Hadoop MapReduce permitió automatizar e
 Este flujo es escalable y puede adaptarse a volúmenes de datos mucho mayores, mostrando la potencia de Hadoop para tareas de procesamiento masivo de texto.
 
 ---
+
+Para mayor informacion sobre la instalacion de Ubuntu en el entorno WSL de Windows, consultar el siguiente documento: ['Informe_Instalacion_Hadoop.pdf'](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/files/Informe_Instalacion_Hadoop.pdf)
+
+## Repositorio GIT
+
+- [https://github.com/esilvas1/conteo_de_palabras_MCD.git](https://github.com/esilvas1/conteo_de_palabras_MCD.git)
 
 ## Referencias
 
