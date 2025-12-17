@@ -293,19 +293,36 @@ El  [`archivo`](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/fil
 
 **¿Concuerda el resultado dado por la herramienta con las palabras más utilizadas en el idioma español?**
 
-De acuerdo con lo revisado los resultados obtenidos validan empíricamente la Ley de Zipf aplicada al idioma español.
-
 Al observar el output del código, notamos que las palabras con mayor frecuencia absoluta (Top 5) son:   
 
-- de (815 repeticiones)
-- la (367 repeticiones)
-- y (248 repeticiones)
-- en (234 repeticiones)
-- el (218 repeticiones)
+| **Palabra** | **Frecuencia** |
+|:-----------:|:--------------:|
+| de          | 815            |
+| el/la       | 367            |
+| y           | 248            |
+| en          | 234            |
+| a           | 124            |
+| que         | 114            |
+
+
+**Comparación con las palabras más frecuentes del español según Davies (2006)**
+
+A continuación se compara el resultado obtenido por la herramienta con las palabras más utilizadas en el idioma español, según el estudio de Davies (2006):
+
+| **Palabra** | **Frecuencia** |
+|:-----------:|:--------------:|
+| el/la       | 20873803       |
+| de          | 13198384       |
+| que         | 626653         |
+| y           | 562612         |
+| a           | 529899         |
+
+**Referencia:**  
+Davies, M. (2006). *A frequency dictionary of modern Spanish: Core vocabulary for learners*. Routledge.
+
+Concuerda el resultado dado por la herramienta con las palabras más utilizadas en el idioma español, las palabras más frecuentes encontradas en nuestro resultado (`resultado_conteo_palabras.txt`) con las de la tabla anterior. Si coinciden las palabras más frecuentes, se puede concluir que la herramienta funciona correctamente para identificar las palabras más comunes del español.
 
 Esto confirma que el la mayor cantidad de datos en un texto en español está compuesto por "Stop Words" (artículos, preposiciones y conjunciones) que aportan estructura gramatical pero no significado semántico por sí solas, es decir no darán un norte completo del panorama que se quiera revisar en el texto.
-
-Sin embargo, el análisis se vuelve valioso al filtrar estas palabras funcionales. Inmediatamente después, emergen los términos que definen el tópico del documento: "ia" (135), "sistemas" (74), "sector" (53) y "ley" (38). Esto demuestra que la herramienta fue capaz de "leer" la temática del documento (Regulación de IA en el sector bancario) a través de la frecuencia estadística, separando correctamente el ruido gramatical de la señal informativa.
 
 ## Conclusiones
  
