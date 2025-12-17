@@ -291,22 +291,23 @@ El  [`archivo`](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/fil
 
 ---
 
-## Conclusiones
+**¿Concuerda el resultado dado por la herramienta con las palabras más utilizadas en el idioma español?**
 
-De acuerdo con lo revisado sí, los resultados obtenidos validan empíricamente la Ley de Zipf aplicada al idioma español.
+De acuerdo con lo revisado los resultados obtenidos validan empíricamente la Ley de Zipf aplicada al idioma español.
 
-Al observar el output del código, notamos que las palabras con mayor frecuencia absoluta (Top 5) son:
+Al observar el output del código, notamos que las palabras con mayor frecuencia absoluta (Top 5) son:   
 
-de (815 repeticiones)
-la (367 repeticiones)
-y (248 repeticiones)
-en (234 repeticiones)
-el (218 repeticiones)
+- de (815 repeticiones)
+- la (367 repeticiones)
+- y (248 repeticiones)
+- en (234 repeticiones)
+- el (218 repeticiones)
 
 Esto confirma que el la mayor cantidad de datos en un texto en español está compuesto por "Stop Words" (artículos, preposiciones y conjunciones) que aportan estructura gramatical pero no significado semántico por sí solas, es decir no darán un norte completo del panorama que se quiera revisar en el texto.
 
 Sin embargo, el análisis se vuelve valioso al filtrar estas palabras funcionales. Inmediatamente después, emergen los términos que definen el tópico del documento: "ia" (135), "sistemas" (74), "sector" (53) y "ley" (38). Esto demuestra que la herramienta fue capaz de "leer" la temática del documento (Regulación de IA en el sector bancario) a través de la frecuencia estadística, separando correctamente el ruido gramatical de la señal informativa.
 
+## Conclusiones
  
 El proceso de conteo de palabras usando Hadoop MapReduce permitió automatizar el análisis de frecuencia de términos en un documento académico extenso. Se demostró la integración de herramientas de extracción de texto, almacenamiento distribuido y procesamiento paralelo, logrando:
 
