@@ -4,11 +4,28 @@
 |:---|---:|
 | **Maestría:** Ciencia de Datos<br>**Universidad:** Pontificia Universidad Javeriana<br>**Materia:** Gestión de Datos<br>**Estudiantes:** Edwin Silva Salas, Carlos Preciado Cárdenas, Cristian Restrepo Zapata<br>**Fecha de inicio:** Diciembre 2025 | <img src="./images/pontificia-universidad-logo.png" alt="Logo Pontificia Universidad Javeriana" width="120"/> |
 
+## Reflexión sobre la importancia de Hadoop y Spark en Ciencia de Datos
+
+La gestión y el análisis de grandes volúmenes de datos son desafíos fundamentales en el ámbito de la Ciencia de Datos. Herramientas como **Hadoop** y **Spark** han revolucionado la forma en que abordamos estos retos, permitiendo el procesamiento distribuido y paralelo de datos a una escala que sería inviable con métodos tradicionales.
+
+**Hadoop** proporciona una infraestructura robusta para el almacenamiento y procesamiento de datos masivos mediante su sistema de archivos distribuido (HDFS) y el paradigma MapReduce. Es especialmente útil cuando se requiere procesar grandes cantidades de información de manera confiable y tolerante a fallos, como en el análisis de logs, procesamiento de textos extensos o integración de datos provenientes de múltiples fuentes.
+
+Por su parte, **Spark** ofrece una plataforma más flexible y veloz para el procesamiento distribuido, permitiendo análisis interactivos, procesamiento en memoria y soporte para tareas avanzadas como machine learning y análisis en tiempo real. Spark es ideal cuando se necesita rapidez en la obtención de resultados, procesamiento iterativo o integración con otras herramientas del ecosistema Big Data.
+
+**Utilizaríamos herramientas como Hadoop y Spark en casos como:**
+- Procesamiento de grandes volúmenes de datos no estructurados (textos, logs, imágenes).
+- Análisis de datos históricos para descubrir patrones o tendencias.
+- Preparación y limpieza de datos a escala antes de aplicar modelos de machine learning.
+- Procesamiento en tiempo real de flujos de datos (Spark Streaming).
+- Integración y análisis de datos provenientes de diferentes sistemas y fuentes.
+
+Hadoop y Spark son pilares en la Ciencia de Datos moderna, habilitando el análisis eficiente y escalable de datos masivos, y permitiendo a los científicos de datos extraer valor y conocimiento de información que, de otro modo, sería inmanejable.
+
+
+
 ## Introducción
 
 El análisis de frecuencia de palabras es una técnica fundamental en el procesamiento de lenguaje natural y minería de textos, utilizada para identificar patrones, extraer información relevante y comprender la estructura de documentos textuales. En el contexto de Big Data, donde los volúmenes de información crecen exponencialmente, se requieren herramientas capaces de procesar grandes cantidades de datos de manera eficiente y escalable. 
-
-Apache Hadoop MapReduce representa una solución robusta para el procesamiento distribuido de datos masivos, permitiendo dividir tareas computacionales complejas en operaciones más simples que pueden ejecutarse en paralelo sobre múltiples nodos. El paradigma MapReduce, inspirado en las funciones map y reduce de la programación funcional, ofrece un modelo de programación simple pero poderoso para el análisis de grandes conjuntos de datos.
 
 Este trabajo presenta la implementación técnica de un sistema de conteo y análisis de frecuencia de palabras aplicado a un documento académico sobre inteligencia artificial en el sector bancario. La solución desarrollada integra múltiples tecnologías: extracción de texto desde formato PDF, almacenamiento en HDFS (Hadoop Distributed File System).
 
@@ -270,7 +287,7 @@ Las primeras líneas del archivo de resultados son:
 (2021).	4
 ```
 
-El archivo completo contiene el conteo de todas las palabras y símbolos presentes en el documento procesado.
+El  [`archivo`](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/files/resultado_conteo_palabras.txt) completo contiene el conteo de todas las palabras y símbolos presentes en el documento procesado.
 
 ---
 
@@ -302,11 +319,11 @@ Este flujo es escalable y puede adaptarse a volúmenes de datos mucho mayores, m
 
 ---
 
-Para mayor informacion sobre la instalacion de Ubuntu en el entorno WSL de Windows, consultar el siguiente documento: ['Informe_Instalacion_Hadoop.pdf'](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/files/Informe_Instalacion_Hadoop.pdf)
+Para mayor informacion sobre la instalacion de Ubuntu y Hadoop en el entorno WSL de Windows, consultar el siguiente documento: [`Informe_Instalacion_Hadoop.pdf`](https://github.com/esilvas1/conteo_de_palabras_MCD/blob/main/files/Informe_Instalacion_Hadoop.pdf)
 
 ## Repositorio GIT
 
-- [https://github.com/esilvas1/conteo_de_palabras_MCD.git](https://github.com/esilvas1/conteo_de_palabras_MCD.git)
+- [`https://github.com/esilvas1/conteo_de_palabras_MCD.git`](https://github.com/esilvas1/conteo_de_palabras_MCD.git)
 
 ## Referencias
 
